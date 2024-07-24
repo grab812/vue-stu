@@ -1,21 +1,13 @@
 <template>
 	<div>
-		<h2>반응형 메세지</h2>
-		<p>{{ reactiveMessage }}</p>
-		<button @click="addreactiveMessage">Add Message</button>
-		<h2>일반 메세지</h2>
-		<p>{{ normalMessage }}</p>
+		<h2>V-html</h2>
+		<div v-html="rawHtml"></div>
 	</div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
-
-const reactiveMessage = ref('Hello Reactive Message');
-const addreactiveMessage = () => {
-	reactiveMessage.value = reactiveMessage.value + '!';
-};
-const normalMessage = 'Hello Normal Message';
+const rawHtml = ref('<strong>안녕</strong>');
 </script>
 
 <style lang="scss" scoped></style>
