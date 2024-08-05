@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>탭메뉴명</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet"  href="./assets/css/all.min.css" >
+	<link rel="stylesheet" href="./assets/css/layout.css">
+	<link rel="stylesheet" href="./assets/css/default.css">
+	<link rel="stylesheet" href="./assets/css/button.css">
+	<link rel="stylesheet" href="./assets/css/bootstrap_modify.css">
+  <link rel="stylesheet" href="./assets/css/AUIGrid_style.css">
+	<link rel="stylesheet" href="./assets/css/AUIGrid_custom.css">
+	<link rel="stylesheet" href="./assets/css/AUIPivot_style.css">
+	<link rel="stylesheet" href="./assets/css/AUIPivot_custom.css">
+	<!-- daterange picker -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.3/daterangepicker.css">
+	<!-- bootstrap datepicker -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css.map">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<!-- design ui JS-->
+	<script src="https://ecs.cjenm.com/js/design/ui.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.js"></script>
+	<!-- date-range-picker -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.3/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.3/daterangepicker.min.js"></script>
+	<!-- bootstrap datepicker -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
+
+    <!-- 20240202 Dashboard Custom CSS -->
+    <style>
+        .tit_noicon::before { content: normal; }
+    </style>
+    <!-- // 20240202 Dashboard Custom CSS -->
+</head>
+
+
+<body>
+  <div class="contentWrap">
+    <div class="titWrap">
+      <h2 class="h2_tit">탭메뉴명</h2>
+    </div>
+    <div id="subcontent">
+          <!-- 조회 조건 -->
+          <div class="cont-header">
+        <!-- search  -->
+        <form class="" action="" method="">
+          <fieldset>
+            <legend>검색</legend>
+  
+            <div class="srchWrap">
+              <div class="container">
+                <div class="tblWrap">
+                  <table>
+                  <colgroup>
+                    <col style="width:86px" />
+                    <col style="width:14%" />
+                    <col style="width:7%" />
+                    <col style="width:20%" />
+                    <col />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <label for="">날짜</label><!-- label for, id 값 일치 -->
+                      </th>
+                      <td>
+                                              <!-- 달력+달력 -->
+                        <div class="daterange">
+                          <div class="datepickerWrap">
+                            <input type="text" class="textBox" id="start" data-date-format="yyyy-mm-dd" value="2019-03-01">
+                            <i class="far fa-calendar-alt"></i>
+                          </div>
+                          <span>~</span>
+                          <div class="datepickerWrap">
+                            <input type="text" class="textBox" id="start" data-date-format="yyyy-mm-dd" value="2019-03-01">
+                            <i class="far fa-calendar-alt"></i>
+                          </div>
+                                              </div>
+                                              <!-- 달력+달력 -->
+                      </td>                                        
+                      <th scope="row">
+                        <label for="">작성자</label><!-- label for, id 값 일치 -->
+                      </th>
+                      <td>
+                                              <div class="search flexbox">
+                                                  <div class="searchBox">
+                                                      <input type="text" class="searchTxt w140" id="">
+                                                      <button type="button" name="button" class="btnsearch">
+                                                          <i class="fa fa-search"></i>
+                                                      </button>
+                                                  </div>
+                                                  <input type="text" class="textBox" value="" readonly="">
+                                              </div>
+                                          </td>
+                                          <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+        <!--// search  -->
+          </div>
+          <!-- // 조회 조건 -->
+  
+          <div class="contents row-2">
+              <div class="container pb10 fixH">
+                  <div class="group" style="padding: 10px 0; height: 300px;"><!-- 20240202 height는 원하시는 크기로 수정 가능합니다. -->
+                      <div class="mainWidget">
+                          <div class="widgetTit d-flex align-items-baseline justify-content-between">
+                              <h3 class="h3_tit">
+                                  투자진행현황
+                              </h3>
+                              <span>2024. 9월말 기준</span>
+                          </div>
+                          <div class="widgetCont row">
+                              <div class="col-3 h-100">
+                                  <h4 class="h4_tit tit_noicon mb10">투자 전체</h4>
+                                  <div id="chartPieDiv1" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
+                                      CHARTS
+                                  </div>
+                              </div>
+                              <div class="col-3 h-100">
+                                  <h4 class="h4_tit tit_noicon mb10">일반 투자</h4>
+                                  <div id="chartPieDiv2" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
+                                      CHARTS
+                                  </div>
+                              </div>
+                              <div class="col-3 h-100">
+                                  <h4 class="h4_tit tit_noicon mb10">콘텐츠 투자</h4>
+                                  <div id="chartPieDiv3" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
+                                      CHARTS
+                                  </div>
+                              </div>
+                              <div class="col-3 h-100">
+                                  <h4 class="h4_tit tit_noicon mb10">지분 투자</h4>
+                                  <div id="chartPieDiv4" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
+                                      CHARTS
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="container inheritH flexH" style="margin-top: -10px;">
+                  <div class="row">
+                      <div class="col-4">
+                          <div class="mainWidget">
+                              <div class="widgetTit">
+                                  <h3 class="h3_tit">
+                                      일반 투자
+                                  </h3>
+                              </div>
+                              <div class="widgetCont d-flex flex-column align-items-stretch">
+                                  <div class="group">
+                                      <h4 class="h4_tit col-8 tit_noicon mb10 border-bottom font-italic">01. 유형별 투자 실적</h4>
+                                      <div id="chartBarDiv1" class="chartBox" style="height: 120px;"><!-- 20240202 height는 원하시는 크기로 수정 가능합니다. -->
+                                          CHARTS
+                                      </div>
+                                  </div>
+                                  <div class="group flex-fill">
+                                      <h4 class="h4_tit col-8 tit_noicon mb10 border-bottom font-italic">02. 주요 투자 Top 5</h4>
+                                      <div class="gridWrap" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
+                                          GRIDS
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-4">
+                          <div class="mainWidget">
+                              <div class="widgetTit">
+                                  <h3 class="h3_tit">
+                                      콘텐츠 투자
+                                  </h3>
+                              </div>
+                              <div class="widgetCont d-flex flex-column align-items-stretch">
+                                  <div class="group">
+                                      <h4 class="h4_tit col-8 tit_noicon mb10 border-bottom font-italic">01. 유형별 투자 실적</h4>
+                                      <div id="chartBarDiv2" class="chartBox" style="height: 120px;"><!-- 20240202 height는 원하시는 크기로 수정 가능합니다. -->
+                                          CHARTS
+                                      </div>
+                                  </div>
+                                  <div class="group flex-fill">
+                                      <h4 class="h4_tit col-8 tit_noicon mb10 border-bottom font-italic">02. 주요 투자 Top 5</h4>
+                                      <div class="gridWrap" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
+                                          GRIDS
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-4">
+                          <div class="mainWidget">
+                              <div class="widgetTit">
+                                  <h3 class="h3_tit">
+                                      지분 투자
+                                  </h3>
+                              </div>
+                              <div class="widgetCont d-flex flex-column align-items-stretch">
+                                  <div class="group">
+                                      <h4 class="h4_tit col-8 tit_noicon mb10 border-bottom font-italic">01. 유형별 투자 실적</h4>
+                                      <div id="chartBarDiv3" class="chartBox" style="height: 120px;"><!-- 20240202 height는 원하시는 크기로 수정 가능합니다. -->
+                                          CHARTS
+                                      </div>
+                                  </div>
+                                  <div class="group flex-fill">
+                                      <h4 class="h4_tit col-8 tit_noicon mb10 border-bottom font-italic">02. 투자자산 거래 현황</h4>
+                                      <div class="gridWrap" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
+                                          GRIDS
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+    </div>
+  </div>
+  
+  <script type="text/javascript" src="https://ecs.cjenm.com/lib/amcharts4/core.js"></script>
+  <script type="text/javascript" src="https://ecs.cjenm.com/lib/amcharts4/charts.js"></script>
+  <script type="text/javascript" src="https://ecs.cjenm.com/lib/amcharts4/themes/animated.js"></script>
+  <script>
+  am4core.ready(function() {
+      am4core.useTheme(am4themes_animated);
+  
+      let chart1 = am4core.create("chartPieDiv1", am4charts.PieChart)
+  
+      // Set inner radius
+      chart1.innerRadius = am4core.percent(60);
+      chart1.startAngle = 140;
+      chart1.endAngle = 400;
+  
+      let pieSeries1 = chart1.series.push(new am4charts.PieSeries());
+      
+      pieSeries1.data = [{
+          "country": "First",
+          "litres": 770,
+          "fill": "#47BAC1",
+          }, {
+          "country": "Remaining",
+          "litres": 230,
+          "fill": "#eeeeee",
+      }]
+  
+      pieSeries1.dataFields.value = "litres";
+      pieSeries1.dataFields.category = "country";
+      pieSeries1.dataFields.hidden = "hidden";
+  
+  
+      // Disable ticks and labels
+      pieSeries1.labels.template.disabled = true;
+      pieSeries1.ticks.template.disabled = true;
+      pieSeries1.slices.template.propertyFields.fill = "fill";
+  
+      // Animation
+      pieSeries1.hiddenState.properties.startAngle = 90;
+      pieSeries1.hiddenState.properties.endAngle = 90;
+  
+      // Add label
+      let label1 = pieSeries1.createChild(am4core.Label);
+      label1.text = `${pieSeries1.data[0].litres}억\n\n\n `;
+      label1.fontWeight = "bold";
+      label1.align = "center";
+      label1.textAlign = "middle";
+      label1.horizontalCenter = "middle";
+      label1.verticalCenter = "middle";
+      label1.fontSize = 30;
+  
+      let pieSeriesPercent1 = pieSeries1.data[0].litres / (pieSeries1.data[0].litres + pieSeries1.data[1].litres) * 100;
+      let label2 = pieSeries1.createChild(am4core.Label);
+      label2.text = `\n(진행율 ${pieSeriesPercent1}%)`;
+      label2.fontWeight = "500";
+      label2.align = "center";
+      label2.textAlign = "middle";
+      label2.horizontalCenter = "middle";
+      label2.verticalCenter = "middle";
+      label2.fontSize = 16;
+  
+  
+  
+  
+      let chart2 = am4core.create("chartPieDiv2", am4charts.PieChart)
+  
+      // Set inner radius
+      chart2.innerRadius = am4core.percent(60);
+      chart2.startAngle = 140;
+      chart2.endAngle = 400;
+  
+      let pieSeries2 = chart2.series.push(new am4charts.PieSeries());
+  
+      pieSeries2.data = [{
+          "country": "First",
+          "litres": 60,
+          "fill": "#6ED5B3",
+          }, {
+          "country": "Remaining",
+          "litres": 40,
+          "fill": "#eeeeee",
+      }]
+  
+      pieSeries2.dataFields.value = "litres";
+      pieSeries2.dataFields.category = "country";
+      pieSeries2.dataFields.hidden = "hidden";
+  
+  
+      // Disable ticks and labels
+      pieSeries2.labels.template.disabled = true;
+      pieSeries2.ticks.template.disabled = true;
+      pieSeries2.slices.template.propertyFields.fill = "fill";
+  
+      // Animation
+      pieSeries2.hiddenState.properties.startAngle = 90;
+      pieSeries2.hiddenState.properties.endAngle = 90;
+  
+      // Add label
+      let label3 = pieSeries2.createChild(am4core.Label);
+      label3.text = `${pieSeries2.data[0].litres}억\n\n\n `;
+      label3.fontWeight = "bold";
+      label3.align = "center";
+      label3.textAlign = "middle";
+      label3.horizontalCenter = "middle";
+      label3.verticalCenter = "middle";
+      label3.fontSize = 30;
+  
+      let pieSeriesPercent2 = pieSeries2.data[0].litres / (pieSeries2.data[0].litres + pieSeries2.data[1].litres) * 100;
+      let label4 = pieSeries2.createChild(am4core.Label);
+      label4.text = `\n(진행율 ${pieSeriesPercent2}%)`;
+      label4.fontWeight = "500";
+      label4.align = "center";
+      label4.textAlign = "middle";
+      label4.horizontalCenter = "middle";
+      label4.verticalCenter = "middle";
+      label4.fontSize = 16;
+  
+      
+  
+  
+      let chart3 = am4core.create("chartPieDiv3", am4charts.PieChart)
+  
+      // Set inner radius
+      chart3.innerRadius = am4core.percent(60);
+      chart3.startAngle = 140;
+      chart3.endAngle = 400;
+  
+      let pieSeries3 = chart3.series.push(new am4charts.PieSeries());
+  
+      pieSeries3.data = [{
+          "country": "First",
+          "litres": 640,
+          "fill": "#F7C44F",
+          }, {
+          "country": "Remaining",
+          "litres": 160,
+          "fill": "#eeeeee",
+      }]
+  
+      pieSeries3.dataFields.value = "litres";
+      pieSeries3.dataFields.category = "country";
+      pieSeries3.dataFields.hidden = "hidden";
+  
+  
+      // Disable ticks and labels
+      pieSeries3.labels.template.disabled = true;
+      pieSeries3.ticks.template.disabled = true;
+      pieSeries3.slices.template.propertyFields.fill = "fill";
+  
+      // Animation
+      pieSeries3.hiddenState.properties.startAngle = 90;
+      pieSeries3.hiddenState.properties.endAngle = 90;
+  
+      // Add label
+      let label5 = pieSeries3.createChild(am4core.Label);
+      label5.text = `${pieSeries3.data[0].litres}억\n\n\n `;
+      label5.fontWeight = "bold";
+      label5.align = "center";
+      label5.textAlign = "middle";
+      label5.horizontalCenter = "middle";
+      label5.verticalCenter = "middle";
+      label5.fontSize = 30;
+  
+      let pieSeriesPercent3 = pieSeries3.data[0].litres / (pieSeries3.data[0].litres + pieSeries3.data[1].litres) * 100;
+      let label6 = pieSeries3.createChild(am4core.Label);
+      label6.text = `\n(진행율 ${pieSeriesPercent3}%)`;
+      label6.fontWeight = "500";
+      label6.align = "center";
+      label6.textAlign = "middle";
+      label6.horizontalCenter = "middle";
+      label6.verticalCenter = "middle";
+      label6.fontSize = 16;
+  
+  
+  
+          
+  
+  
+      let chart4 = am4core.create("chartPieDiv4", am4charts.PieChart)
+  
+      // Set inner radius
+      chart4.innerRadius = am4core.percent(60);
+      chart4.startAngle = 140;
+      chart4.endAngle = 400;
+  
+      let pieSeries4 = chart4.series.push(new am4charts.PieSeries());
+  
+      pieSeries4.data = [{
+          "country": "First",
+          "litres": 70,
+          "fill": "#6B93D0",
+          }, {
+          "country": "Remaining",
+          "litres": 30,
+          "fill": "#eeeeee",
+      }]
+  
+      pieSeries4.dataFields.value = "litres";
+      pieSeries4.dataFields.category = "country";
+      pieSeries4.dataFields.hidden = "hidden";
+  
+  
+      // Disable ticks and labels
+      pieSeries4.labels.template.disabled = true;
+      pieSeries4.ticks.template.disabled = true;
+      pieSeries4.slices.template.propertyFields.fill = "fill";
+  
+      // Animation
+      pieSeries4.hiddenState.properties.startAngle = 90;
+      pieSeries4.hiddenState.properties.endAngle = 90;
+  
+      // Add label
+      let label7 = pieSeries4.createChild(am4core.Label);
+      label7.text = `${pieSeries4.data[0].litres}억\n\n\n `;
+      label7.fontWeight = "bold";
+      label7.align = "center";
+      label7.textAlign = "middle";
+      label7.horizontalCenter = "middle";
+      label7.verticalCenter = "middle";
+      label7.fontSize = 30;
+  
+      let pieSeriesPercent4 = pieSeries4.data[0].litres / (pieSeries4.data[0].litres + pieSeries4.data[1].litres) * 100;
+      let label8 = pieSeries4.createChild(am4core.Label);
+      label8.text = `\n(진행율 ${pieSeriesPercent4}%)`;
+      label8.fontWeight = "500";
+      label8.align = "center";
+      label8.textAlign = "middle";
+      label8.horizontalCenter = "middle";
+      label8.verticalCenter = "middle";
+      label8.fontSize = 16;
+  
+  
+  
+  
+      let barChart1 = am4core.create("chartBarDiv1", am4charts.XYChart);
+      barChart1.numberFormatter.numberFormat = "#.";
+  
+      barChart1.data = [{
+          "year": "",
+          "europe": 20,
+          "namerica": 30,
+          "asia": 10,
+          "percent": 60,
+      }]
+  
+      let colorSet1 = new am4core.ColorSet();
+      colorSet1.list = [
+          "#E2F0D9",
+          "#C5E0B4",
+          "#A9D18E",
+          "#6AA343",
+      ].map(function(color) {
+          return new am4core.color(color);
+      });;
+      barChart1.colors = colorSet1;
+  
+      barChart1.legend = new am4charts.Legend();
+      barChart1.legend.position = "right";
+      barChart1.legend.width = 120;
+      barChart1.legend.itemContainers.template.paddingTop = 5;
+      barChart1.legend.scale = 0.8;
+      barChart1.legend.markers.template.width = 10;
+      barChart1.legend.markers.template.height = 10;
+  
+      let categoryAxis1 = barChart1.yAxes.push(new am4charts.CategoryAxis());
+      categoryAxis1.dataFields.category = "year";
+      categoryAxis1.renderer.grid.template.opacity = 0;
+  
+      let valueAxis1 = barChart1.xAxes.push(new am4charts.ValueAxis());
+      valueAxis1.min = 0;
+      valueAxis1.paddingRight = 40;
+      valueAxis1.renderer.labels.template.disabled = true;
+      valueAxis1.renderer.baseGrid.disabled = true;
+      valueAxis1.calculateTotals = true;
+  
+      function createSeries(chart, field, name) {
+          let series = chart.series.push(new am4charts.ColumnSeries());
+          series.dataFields.valueX = field;
+          series.dataFields.categoryY = "year";
+          series.stacked = true;
+          series.name = name;
+          series.calculatePercent = true;
+          series.columns.template.tooltipText = "[bold]{name}[/]: {valueX}억";
+          
+          let labelBullet = series.bullets.push(new am4charts.LabelBullet());
+          labelBullet.locationX = 0.5;
+          labelBullet.label.text = "{valueX}억";
+      }
+  
+      createSeries(barChart1, "europe", "Europe");
+      createSeries(barChart1, "namerica", "North America");
+      createSeries(barChart1, "asia", "Asia");
+  
+      // Total
+      let totalSeries1 = barChart1.series.push(new am4charts.ColumnSeries());
+      totalSeries1.dataFields.valueX = "year";
+      totalSeries1.dataFields.categoryY = "year";
+      totalSeries1.stacked = true;
+      totalSeries1.hiddenInLegend = true;
+      totalSeries1.columns.template.strokeOpacity = 0;
+  
+      let totalBullet1 = totalSeries1.bullets.push(new am4charts.LabelBullet());
+      totalBullet1.dx = 40;
+      totalBullet1.label.text = "{percent}%";
+      totalBullet1.label.truncate = false;
+      totalBullet1.label.width = 50;
+      totalBullet1.label.height = 50;
+      totalBullet1.label.textAlign = "middle";
+      totalBullet1.label.textValign = "middle";
+      totalBullet1.label.fontSize = 18;
+      totalBullet1.label.tooltipText = "Total: {percent}%";
+      totalBullet1.label.background = new am4core.RoundedRectangle();
+      totalBullet1.label.background.cornerRadius("100%", "100%", "100%", "100%");
+      totalBullet1.label.background.stroke = barChart1.colors.getIndex(barChart1.data.length);
+      totalBullet1.label.background.strokeOpacity = 1;
+      totalBullet1.label.background.strokeWidth = 1;
+      totalBullet1.label.background.strokeDasharray = "8,4";
+  
+  
+  
+      
+      let barChart2 = am4core.create("chartBarDiv2", am4charts.XYChart);
+      barChart2.numberFormatter.numberFormat = "#.";
+  
+      barChart2.data = [{
+          "year": "",
+          "europe": 500,
+          "namerica": 100,
+          "asia": 200,
+          "percent": 80,
+      }]
+  
+      let colorSet2 = new am4core.ColorSet();
+      colorSet2.list = [
+          "#FFF2CC",
+          "#FFE699",
+          "#F4B183",
+          "#EF8B47",
+      ].map(function(color) {
+          return new am4core.color(color);
+      });;
+      barChart2.colors = colorSet2;
+  
+      barChart2.legend = new am4charts.Legend();
+      barChart2.legend.position = "right";
+      barChart2.legend.width = 120;
+      barChart2.legend.itemContainers.template.paddingTop = 5;
+      barChart2.legend.scale = 0.8;
+      barChart2.legend.markers.template.width = 10;
+      barChart2.legend.markers.template.height = 10;
+  
+      let categoryAxis2 = barChart2.yAxes.push(new am4charts.CategoryAxis());
+      categoryAxis2.dataFields.category = "year";
+      categoryAxis2.renderer.grid.template.opacity = 0;
+  
+      let valueAxis2 = barChart2.xAxes.push(new am4charts.ValueAxis());
+      valueAxis2.min = 0;
+      valueAxis2.paddingRight = 40;
+      valueAxis2.renderer.labels.template.disabled = true;
+      valueAxis2.renderer.baseGrid.disabled = true;
+      valueAxis2.calculateTotals = true;
+  
+      createSeries(barChart2, "europe", "Europe");
+      createSeries(barChart2, "namerica", "North America");
+      createSeries(barChart2, "asia", "Asia");
+  
+      // Total
+      let totalSeries2 = barChart2.series.push(new am4charts.ColumnSeries());
+      totalSeries2.dataFields.valueX = "year";
+      totalSeries2.dataFields.categoryY = "year";
+      totalSeries2.stacked = true;
+      totalSeries2.hiddenInLegend = true;
+      totalSeries2.columns.template.strokeOpacity = 0;
+  
+      let totalBullet2 = totalSeries2.bullets.push(new am4charts.LabelBullet());
+      totalBullet2.dx = 40;
+      totalBullet2.label.text = "{percent}%";
+      totalBullet2.label.truncate = false;
+      totalBullet2.label.width = 50;
+      totalBullet2.label.height = 50;
+      totalBullet2.label.textAlign = "middle";
+      totalBullet2.label.textValign = "middle";
+      totalBullet2.label.fontSize = 18;
+      totalBullet2.label.tooltipText = "Total: {percent}%";
+      totalBullet2.label.background = new am4core.RoundedRectangle();
+      totalBullet2.label.background.cornerRadius("100%", "100%", "100%", "100%");
+      totalBullet2.label.background.stroke = barChart2.colors.getIndex(barChart2.data.length);
+      totalBullet2.label.background.strokeOpacity = 1;
+      totalBullet2.label.background.strokeWidth = 1;
+      totalBullet2.label.background.strokeDasharray = "8,4";
+  
+  
+  
+  
+      let barChart3 = am4core.create("chartBarDiv3", am4charts.XYChart);
+      barChart3.numberFormatter.numberFormat = "#.";
+      barChart3.paddingTop = 0;
+      barChart3.paddingBottom = 0;
+  
+      barChart3.data = [{
+          "year": "처분",
+          "europe": 10,
+          "namerica": 5,
+          "percent": 50,
+      }, {
+          "year": "취득",
+          "europe": 50,
+          "namerica": 20,
+          "percent": 70,
+      }, ]
+  
+      barChart3.legend = new am4charts.Legend();
+      // barChart3.legend.position = "right";
+      // barChart3.legend.width = 120;
+      barChart3.legend.itemContainers.template.paddingTop = 5;
+      barChart3.legend.scale = 0.8;
+      barChart3.legend.markers.template.width = 10;
+      barChart3.legend.markers.template.height = 10;
+  
+      let categoryAxis3 = barChart3.yAxes.push(new am4charts.CategoryAxis());
+      categoryAxis3.dataFields.category = "year";
+      categoryAxis3.renderer.grid.template.opacity = 0;
+  
+      let valueAxis3 = barChart3.xAxes.push(new am4charts.ValueAxis());
+      valueAxis3.min = 0;
+      valueAxis3.paddingRight = 40;
+      valueAxis3.renderer.labels.template.disabled = true;
+      valueAxis3.renderer.baseGrid.disabled = true;
+      valueAxis3.calculateTotals = true;
+  
+      createSeries(barChart3, "europe", "Europe");
+      createSeries(barChart3, "namerica", "North America");
+  
+      // Total
+      let totalSeries3 = barChart3.series.push(new am4charts.ColumnSeries());
+      totalSeries3.dataFields.valueX = "year";
+      totalSeries3.dataFields.categoryY = "year";
+      totalSeries3.stacked = true;
+      totalSeries3.hiddenInLegend = true;
+      totalSeries3.columns.template.strokeOpacity = 0;
+  
+      let totalBullet3 = totalSeries3.bullets.push(new am4charts.LabelBullet());
+      totalBullet3.dx = 30;
+      totalBullet3.label.text = "{percent}%";
+      totalBullet3.label.truncate = false;
+      totalBullet3.label.width = 40;
+      totalBullet3.label.height = 40;
+      totalBullet3.label.textAlign = "middle";
+      totalBullet3.label.textValign = "middle";
+      totalBullet3.label.fontSize = 18;
+      totalBullet3.label.tooltipText = "Total: {percent}%";
+      totalBullet3.label.background = new am4core.RoundedRectangle();
+      totalBullet3.label.background.cornerRadius("100%", "100%", "100%", "100%");
+      totalBullet3.label.background.stroke = barChart3.colors.getIndex(barChart3.data.length);
+      totalBullet3.label.background.strokeOpacity = 1;
+      totalBullet3.label.background.strokeWidth = 1;
+      totalBullet3.label.background.strokeDasharray = "8,4";
+  
+  
+  })
+  </script>
+  
+  </body>
+</html>
