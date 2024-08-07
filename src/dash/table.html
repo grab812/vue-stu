@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.amber-pink.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.6.0/css/mdb.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="./assets/css/table.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  
+  <div class="result-content">
+    <h3>점검 결과 현황</h3>
+    <div class="table-responsive results" id="header-table">
+  
+      <!-- tabela -->
+      <table id="tabela1" class="table" width="100%" tabindex="0" aria-label="results">                               
+        <thead>                           
+          <tr>
+            <th colspan="2" tabindex="0">
+              Name
+            </th>
+            <th tabindex="0">
+              DB
+            </th>
+            <th tabindex="0">
+              Location
+            </th>                   
+            <th tabindex="0">
+              Situation
+            </th>
+            <th tabindex="0">
+              Last Change
+            </th>
+            <th tabindex="0">
+              More Options
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2" tabindex="0">
+              점검
+            </td>
+            <td tabindex="0">
+              status
+            </td>
+            <td tabindex="0">
+              <i class="fa fa-check-circle success fa-lg" aria-hidden="true"></i>
+            </td>            
+            <td tabindex="0">
+              <i class="fa fa-exclamation-triangle danger fa-lg" aria-hidden="true"></i>
+              </span>
+            </td>
+            <td tabindex="0">
+              <i class="fa fa-minus-circle notice fa-lg" aria-hidden="true"></i>
+            </td>
+            <td tabindex="0">
+              <i class="fa fa-spinner fa-pulse fa-lg"></i>
+            </td>
+            <td class="moreOptions" >              
+              <span tooltip="details" title="">
+                <a class="fa fa-eye grey-text" data-placement="top" data-toggle="modal" href="#"  data-target="#exampleModalCenter"></a>
+              </span>
+              <span tooltip="swap" title="">
+                <a class="fa fa-exchange-alt grey-text" data-placement="top" href="#"></a>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td tabindex="0">
+              완료시간
+            </td>
+            <td tabindex="0">
+              -
+            </td>
+            <td tabindex="0">
+              09:19
+            </td>
+            <td tabindex="0">
+              12:40
+            </td>
+            <td tabindex="0">
+              09:19
+            </td>
+            <td class="moreOptions" >              
+              <span tooltip="details" title="">
+                <a class="fa fa-eye grey-text" data-placement="top" data-toggle="modal" href="#"  data-target="#exampleModalCenter"></a>
+              </span>
+              <span tooltip="swap" title="">
+                <a class="fa fa-exchange-alt grey-text" data-placement="top" href="#"></a>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="3" tabindex="0">
+              점검항목<br>(건)
+            </td>
+            <td tabindex="0">
+              전체
+            </td>
+            <td tabindex="0">
+              189
+            </td>
+            <td tabindex="0">
+              5
+            </td>
+            <td tabindex="0">
+              82
+            </td>
+            <td tabindex="0">
+              205
+            </td>
+            <td class="moreOptions" >              
+              <span tooltip="details" title="">
+                <a class="fa fa-eye grey-text" data-placement="top" data-toggle="modal" href="#"  data-target="#exampleModalCenter"></a>
+              </span>
+              <span tooltip="swap" title="">
+                <a class="fa fa-exchange-alt grey-text" data-placement="top" href="#"></a>
+              </span>
+              </td>
+          </tr>
+          <tr>
+            <td tabindex="0">
+              이상
+            </td>
+            <td tabindex="0">
+              0
+            </td>
+            <td tabindex="0">
+              0
+            </td>
+            <td tabindex="0">
+              0
+            </td>
+            <td tabindex="0">
+              0
+            </td>
+            <td class="moreOptions" >              
+              <span tooltip="details" title="">
+                <a class="fa fa-eye grey-text" data-placement="top" data-toggle="modal" href="#"  data-target="#exampleModalCenter"></a>
+              </span>
+              <span tooltip="swap" title="">
+                <a class="fa fa-exchange-alt grey-text" data-placement="top" href="#"></a>
+              </span>
+              </td>
+          </tr>
+          <tr>
+            <td tabindex="0">
+              조치
+            </td>
+            <td tabindex="0">
+              0
+            </td>
+            <td tabindex="0">
+              0
+            </td>
+            <td tabindex="0">
+              0
+            </td>
+            <td tabindex="0">
+              0
+            </td>
+            <td class="moreOptions" >              
+              <span tooltip="details" title="">
+                <a class="fa fa-eye grey-text" data-placement="top" data-toggle="modal" href="#"  data-target="#exampleModalCenter"></a>
+              </span>
+              <span tooltip="swap" title="">
+                <a class="fa fa-exchange-alt grey-text" data-placement="top" href="#"></a>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table><!-- end table -->
+  
+    </div><!--end div table-->
+  </div>
+
+</body>
+</html>
