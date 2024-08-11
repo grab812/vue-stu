@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.amber-pink.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.6.0/css/mdb.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="./assets/css/table.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  
+  <div class="result-content">
+    <h3 class="pl-3">점검 결과 현황</h3>
+    <h2 class="result-title">일일 Check List 점검현황</h2>
+    <div class="result-box pt-4">
+      <div class="result-info d-flex justify-content-between px-3 mb-1">
+        <div class="check-point">
+          <span class="pr-2"><i class="fa fa-check-circle success fa-lg pr-1" aria-hidden="true"></i>점검 및 조치완료(이상없음)</span>
+          <span class="pr-2"><i class="fa fa-minus-circle notice fa-lg pr-1" aria-hidden="true"></i>진행중</span>
+          <span class="pr-2"><i class="fa fa-exclamation-triangle danger fa-lg pr-1" aria-hidden="true"></i>조치중(이상있음)</span>
+        </div>
+        <div class="date">2024-08-02 (금) 13:30 기준</div>
+      </div>
+      <div class="table-responsive results" id="header-table">
+        <!-- tabela -->
+        <table id="tabela1" class="table" width="100%" tabindex="0" aria-label="results">                               
+          <thead>                           
+            <tr>
+              <th colspan="2" tabindex="0">
+                Name
+              </th>
+              <th tabindex="0">
+                DB
+              </th>
+              <th tabindex="0">
+                Location
+              </th>                   
+              <th tabindex="0">
+                Situation
+              </th>
+              <th tabindex="0">
+                Last Change
+              </th>
+              <th tabindex="0">
+                More Options
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2" tabindex="0">
+                점검
+              </td>
+              <td tabindex="0">
+                status
+              </td>
+              <td tabindex="0">
+                <span tooltip="조치완료" title="">
+                  <i class="fa fa-check-circle success fa-lg" aria-hidden="true"></i>
+                </span>
+              </td>            
+              <td tabindex="0">
+                <span tooltip="조치중" title="">
+                  <i class="fa fa-exclamation-triangle danger fa-lg" aria-hidden="true"></i>
+                </span>
+              </td>
+              <td tabindex="0">
+                <span tooltip="진행중" title="">
+                  <i class="fa fa-minus-circle notice fa-lg" aria-hidden="true"></i>
+                </span>
+              </td>
+              <td tabindex="0">
+                <span tooltip="실행중" title="">
+                  <i class="fa fa-spinner fa-pulse fa-lg"></i>
+                </span>
+              </td>
+              <td tabindex="0">
+                <span tooltip="진행중" title="">
+                  <i class="fa fa-minus-circle notice fa-lg" aria-hidden="true"></i>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td tabindex="0">
+                완료시간
+              </td>
+              <td tabindex="0">
+                -
+              </td>
+              <td tabindex="0">
+                09:19
+              </td>
+              <td tabindex="0">
+                12:40
+              </td>
+              <td tabindex="0">
+                09:19
+              </td>
+              <td tabindex="0">   
+                11:11
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="3" tabindex="0">
+                점검항목<br>(건)
+              </td>
+              <td tabindex="0">
+                전체
+              </td>
+              <td tabindex="0">
+                189
+              </td>
+              <td tabindex="0">
+                5
+              </td>
+              <td tabindex="0">
+                82
+              </td>
+              <td tabindex="0">
+                205
+              </td>
+              <td tabindex="0">   
+                72
+              </td>
+            </tr>
+            <tr>
+              <td tabindex="0">
+                이상
+              </td>
+              <td tabindex="0">
+                0
+              </td>
+              <td tabindex="0">
+                0
+              </td>
+              <td tabindex="0">
+                0
+              </td>
+              <td tabindex="0">
+                0
+              </td>
+              <td tabindex="0">      
+                0
+              </td>
+            </tr>
+            <tr>
+              <td tabindex="0">
+                조치
+              </td>
+              <td tabindex="0">
+                0
+              </td>
+              <td tabindex="0">
+                0
+              </td>
+              <td tabindex="0">
+                0
+              </td>
+              <td tabindex="0">
+                0
+              </td>
+              <td tabindex="0">      
+                0
+              </td>
+            </tr>
+          </tbody>
+        </table><!-- end table -->
+    
+      </div><!--end div table-->
+    </div>
+  </div>
+
+</body>
+</html>
