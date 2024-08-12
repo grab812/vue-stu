@@ -1,443 +1,804 @@
-<!doctype html>
-<html lang="ko">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>탭메뉴명</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="stylesheet"  href="https://ecs.cjenm.com/css/font-awesome/css/all.min.css" >
-	<link rel="stylesheet" href="https://ecs.cjenm.com/css/layout.css">
-	<link rel="stylesheet" href="https://ecs.cjenm.com/css/blue/default.css">
-	<link rel="stylesheet" href="https://ecs.cjenm.com/css/blue/button.css">
-	<link rel="stylesheet" href="https://ecs.cjenm.com/css/bootstrap_modify.css">
-    <link rel="stylesheet" href="https://ecs.cjenm.com/lib/AUIGrid/AUIGrid_style.css">
-	<link rel="stylesheet" href="https://ecs.cjenm.com/lib/AUIGrid/blue/AUIGrid_custom.css">
-	<link rel="stylesheet" href="https://ecs.cjenm.com/lib/AUIPivot/AUIPivot_style.css">
-	<link rel="stylesheet" href="https://ecs.cjenm.com/lib/AUIPivot/blue/AUIPivot_custom.css">
-	<!-- daterange picker -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.3/daterangepicker.css">
-	<!-- bootstrap datepicker -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css.map">
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet"  href="./assets/css/all.min.css" >
+	<link rel="stylesheet" href="./assets/css/layout.css">
+	<link rel="stylesheet" href="./assets/css/default.css">
+	<link rel="stylesheet" href="./assets/css/button.css">
+	<link rel="stylesheet" href="./assets/css/bootstrap_modify.css">
+  <link rel="stylesheet" href="./assets/css/AUIGrid_style.css">
+	<link rel="stylesheet" href="./assets/css/AUIGrid_custom.css">
+	<link rel="stylesheet" href="./assets/css/AUIPivot_style.css">
+	<link rel="stylesheet" href="./assets/css/AUIPivot_custom.css">
 
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-	<!-- design ui JS-->
-	<script src="https://ecs.cjenm.com/js/design/ui.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.js"></script>
-	<!-- date-range-picker -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.3/moment.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.3/daterangepicker.min.js"></script>
-	<!-- bootstrap datepicker -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
-
-    <!-- 20240202 Dashboard Custom CSS -->
-    <style>
-        .tit_noicon::before { content: normal; }
-    </style>
-    <!-- // 20240202 Dashboard Custom CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"> -->
+  <!-- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.amber-pink.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.6.0/css/mdb.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="./assets/css/chart.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <title>Document</title>
 </head>
-
 <body>
-<div class="contentWrap">
-	<div class="titWrap">
-		<h2 class="h2_tit">탭메뉴명</h2>
-	</div>
-	<div id="subcontent">
-        <!-- 조회 조건 -->
-        <div class="cont-header">
-			<!-- search  -->
-			<form class="" action="" method="">
-				<fieldset>
-					<legend>검색</legend>
-
-					<div class="srchWrap">
-						<div class="container">
-							<div class="tblWrap">
-								<table>
-								<colgroup>
-									<col style="width:86px" />
-									<col style="width:14%" />
-									<col style="width:7%" />
-									<col style="width:20%" />
-									<col />
-									<col />
-								</colgroup>
-								<tbody>
-									<tr>
-										<th scope="row">
-											<label for="">날짜</label><!-- label for, id 값 일치 -->
-										</th>
-										<td>
-                                            <!-- 달력+달력 -->
-											<div class="daterange">
-												<div class="datepickerWrap">
-													<input type="text" class="textBox" id="start" data-date-format="yyyy-mm-dd" value="2019-03-01">
-													<i class="far fa-calendar-alt"></i>
-												</div>
-												<span>~</span>
-												<div class="datepickerWrap">
-													<input type="text" class="textBox" id="start" data-date-format="yyyy-mm-dd" value="2019-03-01">
-													<i class="far fa-calendar-alt"></i>
-												</div>
-                                            </div>
-                                            <!-- 달력+달력 -->
-										</td>                                        
-										<th scope="row">
-											<label for="">작성자</label><!-- label for, id 값 일치 -->
-										</th>
-										<td>
-                                            <div class="search flexbox">
-                                                <div class="searchBox">
-                                                    <input type="text" class="searchTxt w140" id="">
-                                                    <button type="button" name="button" class="btnsearch">
-                                                        <i class="fa fa-search"></i>
-                                                    </button>
-                                                </div>
-                                                <input type="text" class="textBox" value="" readonly="">
-                                            </div>
-                                        </td>
-                                        <td></td>
-									</tr>
-								</tbody>
-							</table>
-							</div>
-						</div>
-					</div>
-				</fieldset>
-			</form>
-			<!--// search  -->
-        </div>
-        <!-- // 조회 조건 -->
-
-        <div class="contents row-2">
-            <div class="container mt10 inheritH flexH" style="height: 800px;">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="mainWidget">
-                            <div class="widgetTit">
-                                <h3 class="h3_tit">
-                                    화면 접속 순위 TOP5
-                                </h3>
+  
+  <div class="contentWrap">
+    <div class="titWrap">
+      <h2 class="h2_tit">Today's systme check</h2>
+    </div>
+    <div id="subcontent">
+          <div class="contents row-2">
+              <div class="container pb10 fixH">
+                  <div class="group" style="padding: 10px 0; height: 250px;"><!-- 20240202 height는 원하시는 크기로 수정 가능합니다. -->
+                      <div class="mainWidget">
+                          <div class="widgetTit dashboardTit d-flex align-items-baseline justify-content-between">
+                              <h3 class="h3_tit">
+                                  점검진행현황
+                              </h3>
+                              <span>2024. 9월말 기준</span>
+                          </div>
+                          <div class="widgetCont dashboardCnt row">
+                            <div class="col-2 d-flex justify-content-center align-items-center">
+                              <h1>
+                                One System
+                              </h1>
                             </div>
-                            <div class="widgetCont d-flex flex-column align-items-stretch">
-                                <div class="group">
-                                    <h4 class="h4_tit col-8 tit_noicon mb10 border-bottom font-italic">01. 유형별 투자 실적</h4>
-                                    <div id="chartDashboard1" class="chartBox" style="height: 600px;"><!-- 20240202 height는 원하시는 크기로 수정 가능합니다. -->
+                            <div class="col-10">
+                              <div class="row">
+                                <div class="col-3 h-100">
+                                  <h4 class="h4_tit tit_noicon">처리율</h4>
+                                  <div id="chartPieDiv1" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
+                                      CHARTS
+                                  </div>
+                                </div>
+                                <div class="col-3 h-100">
+                                    <h4 class="h4_tit tit_noicon">전체 오류 건수</h4>
+                                    <div id="chartPieDiv2" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
                                         CHARTS
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div class="mainWidget">
-                            <div class="widgetTit">
-                                <h3 class="h3_tit">
-                                    One 시스템별 예외 요류 발생 추의
-                                </h3>
-                            </div>
-                            <div class="widgetCont d-flex flex-column align-items-stretch">
-                                <div class="group">
-                                    <h4 class="h4_tit col-8 tit_noicon mb10 border-bottom font-italic">01. 유형별 투자 실적</h4>
-                                    <div id="chartBarDiv1" class="chartBox" style="height: 600px;"><!-- 20240202 height는 원하시는 크기로 수정 가능합니다. -->
+                                <div class="col-3 h-100">
+                                    <h4 class="h4_tit tit_noicon">웹 오류 건수</h4>
+                                    <div id="chartPieDiv3" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
                                         CHARTS
                                     </div>
                                 </div>
+                                <div class="col-3 h-100">
+                                    <h4 class="h4_tit tit_noicon">배치 오류 건수</h4>
+                                    <div id="chartPieDiv4" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
+                                        CHARTS
+                                    </div>
+                                </div>
+                              </div>
                             </div>
-                        </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="container pb10 fixH">
+                <div class="group">
+                  <div class="mainWidget">
+                    <div class="widgetTit dashboardTit d-flex align-items-baseline justify-content-between">
+                        <h3 class="h3_tit">
+                          예외 오류 | ITSM SR | 고객 문의
+                        </h3>
+                        <span>2024. 9월말 기준</span>
                     </div>
+                    <div class="widgetCont dashboardCnt row">
+                      <div class="col-6 mb-4">
+                        <div class="widgetSubInfo row mx-1">
+                          <div class="col-2 d-flex align-items-center justify-content-center chartSubTit">
+                            <h3 class="p-2">
+                              예외오류
+                            </h3>
+                          </div>
+                          <div class="col-10 pl-3">
+                            <div class="d-flex flex-row align-items-center">
+                              <p class="p-2">발생 <span>50</span></p>/
+                              <p class="p-2">해결 <span>10</span></p>
+                            </div>
+                            <div id="chartBarSub1" class="chartBox" style="height: 50px;"><!-- height는 원하시는 크기로 수정 가능합니다. -->
+                              CHARTS
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="mt-2 table-responsive results" id="header-table">
+                            <!-- tabela -->
+                            <table id="tabela1" class="table" width="100%" tabindex="0" aria-label="results">                               
+                              <thead>                           
+                                <tr>
+                                  <th tabindex="0">
+                                    Onesystem
+                                  </th>
+                                  <th tabindex="0">
+                                    대기
+                                  </th>
+                                  <th tabindex="0">
+                                    접수
+                                  </th>                   
+                                  <th tabindex="0">
+                                    보류
+                                  </th>
+                                  <th tabindex="0">
+                                    해결
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td tabindex="0">
+                                    BizOne
+                                  </td>
+                                  <td tabindex="0">
+                                    10
+                                  </td>
+                                  <td tabindex="0">
+                                    -
+                                  </td>   
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                </tr>
+                                <tr>
+                                  <td tabindex="0">
+                                    MediaOne
+                                  </td>
+                                  <td tabindex="0">
+                                    10
+                                  </td>
+                                  <td tabindex="0">
+                                    -
+                                  </td>   
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                </tr>
+                                <tr>
+                                  <td tabindex="0">
+                                    MovieOne
+                                  </td>
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                  <td tabindex="0">
+                                    10
+                                  </td>  
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                </tr>
+                                <tr>
+                                  <td tabindex="0">
+                                    MusicOne
+                                  </td>
+                                  <td tabindex="0">
+                                    -
+                                  </td>   
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                  <td tabindex="0">
+                                    10
+                                  </td>
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                </tr>
+                                <tr>
+                                  <td tabindex="0">
+                                    DMP
+                                  </td>
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                  <td tabindex="0">
+                                    10
+                                  </td>  
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                </tr>
+                              </tbody>
+                            </table>
+                            <!-- end table -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 mb-4">
+                        <div class="widgetSubInfo row mx-1">
+                          <div class="col-2 d-flex align-items-center justify-content-center chartSubTit">
+                            <h3 class="p-2">
+                              ITSM SR
+                            </h3>
+                          </div>
+                          <div class="col-10 pl-3 d-flex align-items-center">
+                            <div class="d-flex flex-row align-items-center">
+                              <p class="p-2">신규 <span>20</span></p>/
+                              <p class="p-2">대기 <span>10</span></p>/
+                              <p class="p-2">배포 <span>2</span></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="mt-2 table-responsive results" id="header-table">
+                            <!-- tabela -->
+                            <table id="tabela1" class="table" width="100%" tabindex="0" aria-label="results">                               
+                              <thead>                           
+                                <tr>
+                                  <th tabindex="0">
+                                    Onesystem
+                                  </th>
+                                  <th tabindex="0">
+                                    대기
+                                  </th>
+                                  <th tabindex="0">
+                                    접수
+                                  </th>                   
+                                  <th tabindex="0">
+                                    보류
+                                  </th>
+                                  <th tabindex="0">
+                                    해결
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td tabindex="0">
+                                    BizOne
+                                  </td>
+                                  <td tabindex="0">
+                                    10
+                                  </td>
+                                  <td tabindex="0">
+                                    -
+                                  </td>   
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                </tr>
+                                <tr>
+                                  <td tabindex="0">
+                                    MediaOne
+                                  </td>
+                                  <td tabindex="0">
+                                    10
+                                  </td>
+                                  <td tabindex="0">
+                                    -
+                                  </td>   
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                </tr>
+                                <tr>
+                                  <td tabindex="0">
+                                    MovieOne
+                                  </td>
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                  <td tabindex="0">
+                                    10
+                                  </td>  
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                </tr>
+                                <tr>
+                                  <td tabindex="0">
+                                    MusicOne
+                                  </td>
+                                  <td tabindex="0">
+                                    -
+                                  </td>   
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                  <td tabindex="0">
+                                    10
+                                  </td>
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                </tr>
+                                <tr>
+                                  <td tabindex="0">
+                                    DMP
+                                  </td>
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                  <td tabindex="0">
+                                    10
+                                  </td>  
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                  <td tabindex="0">
+                                    -
+                                  </td> 
+                                </tr>
+                              </tbody>
+                            </table>
+                            <!-- end table -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 mb-4">
+                        <div class="widgetSubInfo row mx-1">
+                          <div class="col-2 d-flex align-items-center justify-content-center chartSubTit">
+                            <h3 class="p-2">
+                              고객 문의
+                            </h3>
+                          </div>
+                          <div class="col-10 pl-3 d-flex align-items-center">
+                            <div class="d-flex flex-row align-items-center">
+                              <p class="p-2">신규 <span>5건</span></p>/
+                              <p class="p-2">해결 <span>1건 (20%)</span></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="mt-2 manager">
+                            <ul class="manager-list">
+                              <li>
+                                <span>10:20:25</span><span>문의유형 비전 초기화 요청드립니다.</span><span>김고객 대기중</span>
+                              </li>
+                              <li>
+                                <span>10:20:25</span><span>문의유형 비전 초기화 요청드립니다.</span><span>김고객 대기중</span>
+                              </li>
+                              <li>
+                                <span>10:20:25</span><span>문의유형 비전 초기화 요청드립니다.</span><span>김고객 대기중</span>
+                              </li>
+                              <li>
+                                <span>10:20:25</span><span>문의유형 비전 초기화 요청드립니다.</span><span>김고객 대기중</span>
+                              </li>
+                              <li>
+                                <span>10:20:25</span><span>문의유형 비전 초기화 요청드립니다.</span><span>김고객 대기중</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 mb-4">
+                        <div class="widgetSubInfo row mx-1">
+                          <div class="col-2 d-flex align-items-center justify-content-center chartSubTit">
+                            <h3 class="p-2">
+                              월 작업 Check
+                            </h3>
+                          </div>
+                          <div class="col-10 pl-3 d-flex align-items-center">
+                            <div class="check-point">
+                              <span class="pr-2"><i class="fa fa-square onsite" aria-hidden="true"></i>현업</span>
+                              <span class="pr-2"><i class="fa fa-square finance" aria-hidden="true"></i>재무</span>
+                              <span class="pr-2"><i class="fa fa-square declaration" aria-hidden="true"></i>계산서신고</span>
+                              <span class="pr-2"><i class="fa fa-square onepoint" aria-hidden="true"></i>원포인트</span>
+                              <span class="pr-2"><i class="fa fa-square transaction" aria-hidden="true"></i>내부거래</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <!-- tabela -->
+                          <table id="calendar" class="calendar" width="100%" tabindex="0">                               
+                            <thead>                           
+                              <tr>
+                                <th tabindex="0">Sun</th>
+                                <th tabindex="0">Mon</th>
+                                <th tabindex="0">Tue</th>
+                                <th tabindex="0">Wed</th>
+                                <th tabindex="0">Thu</th>
+                                <th tabindex="0">Fri</th>
+                                <th tabindex="0">Sat</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td tabindex="0"></td>
+                                <td tabindex="0"></td>
+                                <td tabindex="0"></td>   
+                                <td tabindex="0"></td>
+                                <td tabindex="0">1</td>
+                                <td tabindex="0">2</td>
+                                <td tabindex="0">3</td>
+                              </tr>
+                              <tr>
+                                <td tabindex="0">4</td>
+                                <td tabindex="0" class="onsite">5</td>
+                                <td tabindex="0">6</td>   
+                                <td tabindex="0" class="finance">7</td>
+                                <td tabindex="0">8</td>
+                                <td tabindex="0">9</td>
+                                <td tabindex="0">10</td>
+                              </tr>
+                              <tr>
+                                <td tabindex="0">11</td>
+                                <td tabindex="0">12</td>
+                                <td tabindex="0">13</td>
+                                <td tabindex="0">14</td>
+                                <td tabindex="0">15</td>
+                                <td tabindex="0">16</td>
+                                <td tabindex="0">17</td>
+                              </tr>
+                              <tr>
+                                <td tabindex="0">18</td>
+                                <td tabindex="0">19</td>
+                                <td tabindex="0">20</td>
+                                <td tabindex="0">21</td>
+                                <td tabindex="0">22</td>
+                                <td tabindex="0">23</td>
+                                <td tabindex="0">24</td>
+                              </tr>
+                              <tr>
+                                <td tabindex="0">25</td>
+                                <td tabindex="0">26</td>
+                                <td tabindex="0">27</td>
+                                <td tabindex="0">28</td>
+                                <td tabindex="0">29</td>
+                                <td tabindex="0">30</td>
+                                <td tabindex="0">31</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!-- end table -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </div>
-        </div>
-	</div>
-</div>
+          </div>
+    </div>
+  </div>
 
-<!-- Styles -->
-<style>
+      <!-- amCharts 4 core -->
+      <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+      <!-- amCharts 4 charts -->
+      <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+      <!-- amCharts 4 animated theme (optional) -->
+      <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+  <script>
+  am4core.ready(function() {
+      am4core.useTheme(am4themes_animated);
+  
+      let chart1 = am4core.create("chartPieDiv1", am4charts.PieChart)
+  
+      // Set inner radius
+      chart1.innerRadius = am4core.percent(60);
+      chart1.startAngle = 140;
+      chart1.endAngle = 400;
+  
+      let pieSeries1 = chart1.series.push(new am4charts.PieSeries());
+      
+      pieSeries1.data = [{
+          "country": "First",
+          "litres": 770,
+          "fill": "#669bbc",
+          }, {
+          "country": "Remaining",
+          "litres": 230,
+          "fill": "#eeeeee",
+      }]
+  
+      pieSeries1.dataFields.value = "litres";
+      pieSeries1.dataFields.category = "country";
+      pieSeries1.dataFields.hidden = "hidden";
+  
+  
+      // Disable ticks and labels
+      pieSeries1.labels.template.disabled = true;
+      pieSeries1.ticks.template.disabled = true;
+      pieSeries1.slices.template.propertyFields.fill = "fill";
+  
+      // Animation
+      pieSeries1.hiddenState.properties.startAngle = 90;
+      pieSeries1.hiddenState.properties.endAngle = 90;
+  
+      // Add label
+      let label1 = pieSeries1.createChild(am4core.Label);
+      label1.text = `${pieSeries1.data[0].litres}건\n\n\n `;
+      label1.fontWeight = "bold";
+      label1.align = "center";
+      label1.textAlign = "middle";
+      label1.horizontalCenter = "middle";
+      label1.verticalCenter = "middle";
+      label1.fontSize = 30;
+  
+      let pieSeriesPercent1 = pieSeries1.data[0].litres / (pieSeries1.data[0].litres + pieSeries1.data[1].litres) * 100;
+      let label2 = pieSeries1.createChild(am4core.Label);
+      label2.text = `\n(진행율 ${pieSeriesPercent1}%)`;
+      label2.fontWeight = "500";
+      label2.align = "center";
+      label2.textAlign = "middle";
+      label2.horizontalCenter = "middle";
+      label2.verticalCenter = "middle";
+      label2.fontSize = 16;
+  
+  
+  
+  
+      let chart2 = am4core.create("chartPieDiv2", am4charts.PieChart)
+  
+      // Set inner radius
+      chart2.innerRadius = am4core.percent(60);
+      chart2.startAngle = 140;
+      chart2.endAngle = 400;
+  
+      let pieSeries2 = chart2.series.push(new am4charts.PieSeries());
+  
+      pieSeries2.data = [{
+          "country": "First",
+          "litres": 60,
+          "fill": "#669bbc",
+          }, {
+          "country": "Remaining",
+          "litres": 40,
+          "fill": "#eeeeee",
+      }]
+  
+      pieSeries2.dataFields.value = "litres";
+      pieSeries2.dataFields.category = "country";
+      pieSeries2.dataFields.hidden = "hidden";
+  
+  
+      // Disable ticks and labels
+      pieSeries2.labels.template.disabled = true;
+      pieSeries2.ticks.template.disabled = true;
+      pieSeries2.slices.template.propertyFields.fill = "fill";
+  
+      // Animation
+      pieSeries2.hiddenState.properties.startAngle = 90;
+      pieSeries2.hiddenState.properties.endAngle = 90;
+  
+      // Add label
+      let label3 = pieSeries2.createChild(am4core.Label);
+      label3.text = `${pieSeries2.data[0].litres}건\n\n\n `;
+      label3.fontWeight = "bold";
+      label3.align = "center";
+      label3.textAlign = "middle";
+      label3.horizontalCenter = "middle";
+      label3.verticalCenter = "middle";
+      label3.fontSize = 30;
+  
+      let pieSeriesPercent2 = pieSeries2.data[0].litres / (pieSeries2.data[0].litres + pieSeries2.data[1].litres) * 100;
+      let label4 = pieSeries2.createChild(am4core.Label);
+      label4.text = `\n(진행율 ${pieSeriesPercent2}%)`;
+      label4.fontWeight = "500";
+      label4.align = "center";
+      label4.textAlign = "middle";
+      label4.horizontalCenter = "middle";
+      label4.verticalCenter = "middle";
+      label4.fontSize = 16;
+  
+      
+  
+  
+      let chart3 = am4core.create("chartPieDiv3", am4charts.PieChart)
+  
+      // Set inner radius
+      chart3.innerRadius = am4core.percent(60);
+      chart3.startAngle = 140;
+      chart3.endAngle = 400;
+  
+      let pieSeries3 = chart3.series.push(new am4charts.PieSeries());
+  
+      pieSeries3.data = [{
+          "country": "First",
+          "litres": 640,
+          "fill": "#669bbc",
+          }, {
+          "country": "Remaining",
+          "litres": 160,
+          "fill": "#eeeeee",
+      }]
+  
+      pieSeries3.dataFields.value = "litres";
+      pieSeries3.dataFields.category = "country";
+      pieSeries3.dataFields.hidden = "hidden";
+  
+  
+      // Disable ticks and labels
+      pieSeries3.labels.template.disabled = true;
+      pieSeries3.ticks.template.disabled = true;
+      pieSeries3.slices.template.propertyFields.fill = "fill";
+  
+      // Animation
+      pieSeries3.hiddenState.properties.startAngle = 90;
+      pieSeries3.hiddenState.properties.endAngle = 90;
+  
+      // Add label
+      let label5 = pieSeries3.createChild(am4core.Label);
+      label5.text = `${pieSeries3.data[0].litres}건\n\n\n `;
+      label5.fontWeight = "bold";
+      label5.align = "center";
+      label5.textAlign = "middle";
+      label5.horizontalCenter = "middle";
+      label5.verticalCenter = "middle";
+      label5.fontSize = 30;
+  
+      let pieSeriesPercent3 = pieSeries3.data[0].litres / (pieSeries3.data[0].litres + pieSeries3.data[1].litres) * 100;
+      let label6 = pieSeries3.createChild(am4core.Label);
+      label6.text = `\n(진행율 ${pieSeriesPercent3}%)`;
+      label6.fontWeight = "500";
+      label6.align = "center";
+      label6.textAlign = "middle";
+      label6.horizontalCenter = "middle";
+      label6.verticalCenter = "middle";
+      label6.fontSize = 16;
+  
 
-</style>
+      let chart4 = am4core.create("chartPieDiv4", am4charts.PieChart)
+  
+      // Set inner radius
+      chart4.innerRadius = am4core.percent(60);
+      chart4.startAngle = 140;
+      chart4.endAngle = 400;
+  
+      let pieSeries4 = chart4.series.push(new am4charts.PieSeries());
+  
+      pieSeries4.data = [{
+          "country": "First",
+          "litres": 100,
+          "fill": "#669bbc",
+          }, {
+          "country": "Remaining",
+          "litres": 0,
+          "fill": "#eeeeee",
+      }]
+  
+      pieSeries4.dataFields.value = "litres";
+      pieSeries4.dataFields.category = "country";
+      pieSeries4.dataFields.hidden = "hidden";
+  
+  
+      // Disable ticks and labels
+      pieSeries4.labels.template.disabled = true;
+      pieSeries4.ticks.template.disabled = true;
+      pieSeries4.slices.template.propertyFields.fill = "fill";
+  
+      // Animation
+      pieSeries4.hiddenState.properties.startAngle = 90;
+      pieSeries4.hiddenState.properties.endAngle = 90;
+  
+      // Add label
+      let label7 = pieSeries4.createChild(am4core.Label);
+      label7.text = `${pieSeries4.data[0].litres}건\n\n\n `;
+      label7.fontWeight = "bold";
+      label7.align = "center";
+      label7.textAlign = "middle";
+      label7.horizontalCenter = "middle";
+      label7.verticalCenter = "middle";
+      label7.fontSize = 30;
+  
+      let pieSeriesPercent4 = pieSeries4.data[0].litres / (pieSeries4.data[0].litres + pieSeries4.data[1].litres) * 100;
+      let label8 = pieSeries4.createChild(am4core.Label);
+      label8.text = `\n(진행율 ${pieSeriesPercent4}%)`;
+      label8.fontWeight = "500";
+      label8.align = "center";
+      label8.textAlign = "middle";
+      label8.horizontalCenter = "middle";
+      label8.verticalCenter = "middle";
+      label8.fontSize = 16;
 
-<!-- Resources -->
-<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-<!-- Chart code -->
-<script>
-    am5.ready(function() {
-    
-    // Create root element
-    // https://www.amcharts.com/docs/v5/getting-started/#Root_element
-    var root = am5.Root.new("chartDashboard1");
-    
-    // Set themes
-    // https://www.amcharts.com/docs/v5/concepts/themes/
-    root.setThemes([
-      am5themes_Animated.new(root)
-    ]);
-    
-    var data = [
-      {
-        ranking: 5,
-        name: "Joey",
-        steps: 35781,
-        pictureSettings: {
-          src: "https://www.amcharts.com/wp-content/uploads/2019/04/joey.jpg"
-        }
-      },
-      {
-        ranking: 4,
-        name: "Ross",
-        steps: 25464,
-        pictureSettings: {
-          src: "https://www.amcharts.com/wp-content/uploads/2019/04/ross.jpg"
-        }
-      },
-      {
-        ranking: 3,
-        name: "Phoebe",
-        steps: 18788,
-        pictureSettings: {
-          src: "https://www.amcharts.com/wp-content/uploads/2019/04/phoebe.jpg"
-        }
-      },
-      {
-        ranking: 2,
-        name: "Rachel",
-        steps: 15465,
-        pictureSettings: {
-          src: "https://www.amcharts.com/wp-content/uploads/2019/04/rachel.jpg"
-        }
-      },
-      {
-        ranking: 1,
-        name: "Chandler",
-        steps: 11561,
-        pictureSettings: {
-          src: "https://www.amcharts.com/wp-content/uploads/2019/04/chandler.jpg"
-        }
+
+
+      ///////// subchart
+      
+
+      let barChart1 = am4core.create("chartBarSub1", am4charts.XYChart);
+      barChart1.numberFormatter.numberFormat = "#.";
+  
+      barChart1.data = [{
+          "year": "",
+          "success": 80,
+          "fail": 10,
+      }]
+  
+      let colorSet1 = new am4core.ColorSet();
+      colorSet1.list = [
+        "#A9D18E",
+        "#E2F0D9",
+        "#C5E0B4",
+      ].map(function(color) {
+          return new am4core.color(color);
+      });;
+      barChart1.colors = colorSet1;
+  
+      barChart1.legend = new am4charts.Legend();
+      barChart1.legend.position = "right";
+      barChart1.legend.width = 100;
+      barChart1.legend.itemContainers.template.paddingTop = 5;
+      barChart1.legend.scale = 0.8;
+      barChart1.legend.markers.template.width = 10;
+      barChart1.legend.markers.template.height = 10;
+  
+      let categoryAxis1 = barChart1.yAxes.push(new am4charts.CategoryAxis());
+      categoryAxis1.dataFields.category = "year";
+      categoryAxis1.renderer.grid.template.opacity = 0;
+  
+      let valueAxis1 = barChart1.xAxes.push(new am4charts.ValueAxis());
+      valueAxis1.min = 0;
+      valueAxis1.paddingRight = 40;
+      valueAxis1.renderer.labels.template.disabled = true;
+      valueAxis1.renderer.baseGrid.disabled = true;
+      valueAxis1.calculateTotals = true;
+  
+      function createSeries(chart, field, name) {
+          let series = chart.series.push(new am4charts.ColumnSeries());
+          series.dataFields.valueX = field;
+          series.dataFields.categoryY = "year";
+          series.stacked = true;
+          series.name = name;
+          series.calculatePercent = true;
+          series.columns.template.tooltipText = "[bold]{name}[/]: {valueX}건";
+          
+          let labelBullet = series.bullets.push(new am4charts.LabelBullet());
+          labelBullet.locationX = 0.5;
+          labelBullet.label.text = "{valueX}건";
       }
-    ];
-    
-    // Create chart
-    // https://www.amcharts.com/docs/v5/charts/xy-chart/
-    var chart = root.container.children.push(
-      am5xy.XYChart.new(root, {
-        panX: false,
-        panY: false,
-        paddingLeft:0,
-        paddingRight:30,
-        wheelX: "none",
-        wheelY: "none"
-      })
-    );
-    
-    // Create axes
-    // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
-    
-    var yRenderer = am5xy.AxisRendererY.new(root, {
-      minorGridEnabled:true
-    });
-    yRenderer.grid.template.set("visible", false);
-    
-    var yAxis = chart.yAxes.push(
-      am5xy.CategoryAxis.new(root, {
-        categoryField: "name",
-        renderer: yRenderer,
-        paddingRight:40
-      })
-    );
-    
-    var xRenderer = am5xy.AxisRendererX.new(root, {
-      minGridDistance:80,
-      minorGridEnabled:true
-    });
-    
-    var xAxis = chart.xAxes.push(
-      am5xy.ValueAxis.new(root, {
-        min: 0,
-        renderer: xRenderer
-      })
-    );
-    
-    // Add series
-    // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
-    var series = chart.series.push(
-      am5xy.ColumnSeries.new(root, {
-        name: "Income",
-        xAxis: xAxis,
-        yAxis: yAxis,
-        valueXField: "steps",
-        categoryYField: "name",
-        sequencedInterpolation: true,
-        calculateAggregates: true,
-        maskBullets: false,
-        tooltip: am5.Tooltip.new(root, {
-          dy: -30,
-          pointerOrientation: "vertical",
-          labelText: "{valueX}"
-        })
-      })
-    );
-    
-    series.columns.template.setAll({
-      strokeOpacity: 0,
-      cornerRadiusBR: 50,
-      cornerRadiusTR: 50,
-      cornerRadiusBL: 0,
-      cornerRadiusTL: 0,
-      maxHeight: 50,
-      fillOpacity: 0.8
-    });
-    
-    // var currentlyHovered;
-    
-    // series.columns.template.events.on("pointerover", function(e) {
-    //   handleHover(e.target.dataItem);
-    // });
-    
-    // series.columns.template.events.on("pointerout", function(e) {
-    //   handleOut();
-    // });
-    
-    // function handleHover(dataItem) {
-    //   if (dataItem && currentlyHovered != dataItem) {
-    //     handleOut();
-    //     currentlyHovered = dataItem;
-    //     var bullet = dataItem.bullets[0];
-    //     bullet.animate({
-    //       key: "locationX",
-    //       to: 1,
-    //       duration: 600,
-    //       easing: am5.ease.out(am5.ease.cubic)
-    //     });
-    //   }
-    // }
-    
-    // function handleOut() {
-    //   if (currentlyHovered) {
-    //     var bullet = currentlyHovered.bullets[0];
-    //     bullet.animate({
-    //       key: "locationX",
-    //       to: 0,
-    //       duration: 600,
-    //       easing: am5.ease.out(am5.ease.cubic)
-    //     });
-    //   }
-    // }
-    
-    
-    var circleTemplate = am5.Template.new({});
-    
-    series.bullets.push(function() {
-    return am5.Bullet.new(root, {
-      locationX: 0.5,
-      locationY: 0.5,
-      sprite: am5.Circle.new(root, {
-        radius: 15,
-        fill: am5.color(0xffffff)
-      })
-    });
-  });
+  
+      createSeries(barChart1, "success", "success");
+      createSeries(barChart1, "fail", "fail");
+  
+      // Total
+      let totalSeries1 = barChart1.series.push(new am4charts.ColumnSeries());
+      totalSeries1.dataFields.valueX = "year";
+      totalSeries1.dataFields.categoryY = "year";
+      totalSeries1.stacked = true;
+      totalSeries1.hiddenInLegend = true;
+      totalSeries1.columns.template.strokeOpacity = 0;
+  
+      let totalBullet1 = totalSeries1.bullets.push(new am4charts.LabelBullet());
+      totalBullet1.dx = 40;
+      totalBullet1.label.text = "{percent}%";
+      totalBullet1.label.truncate = false;
+      totalBullet1.label.width = 30;
+      totalBullet1.label.height = 30;
+      totalBullet1.label.textAlign = "middle";
+      totalBullet1.label.textValign = "middle";
+      totalBullet1.label.fontSize = 18;
+      totalBullet1.label.tooltipText = "Total: {percent}%";
+      totalBullet1.label.background = new am4core.RoundedRectangle();
+      totalBullet1.label.background.cornerRadius("100%", "100%", "100%", "100%");
+      totalBullet1.label.background.stroke = barChart1.colors.getIndex(barChart1.data.length);
+      totalBullet1.label.background.strokeOpacity = 1;
+      totalBullet1.label.background.strokeWidth = 1;
+      totalBullet1.label.background.strokeDasharray = "8,4";
 
+  
+  })
+  </script>
 
-    series.bullets.push(function(root, series, dataItem) {
-      var bulletContainer = am5.Container.new(root, {});
-      var circle = bulletContainer.children.push(
-        am5.Circle.new(
-          root,
-          {
-            locationX: 0.5,
-            locationY: 0.5,
-            radius: 20,
-            sprite: am5.Label.new(root, {
-                text: "{ranking}",
-                centerX: am5.percent(0),
-                centerY: am5.percent(50),
-                textAlign: "center",
-                populateText: true
-            })
-          },
-          circleTemplate
-        )
-      );
-    
-    //   var maskCircle = bulletContainer.children.push(
-    //     am5.Circle.new(root, { radius: 27 })
-    //   );
-    
-    //   // only containers can be masked, so we add image to another container
-    //   var imageContainer = bulletContainer.children.push(
-    //     am5.Container.new(root, {
-    //       mask: maskCircle
-    //     })
-    //   );
-    
-    //   // not working
-    //   var image = imageContainer.children.push(
-    //     am5.Picture.new(root, {
-    //       templateField: "pictureSettings",
-    //       centerX: am5.p50,
-    //       centerY: am5.p50,
-    //       width: 60,
-    //       height: 60
-    //     })
-    //   );
-    
-      return am5.Bullet.new(root, {
-        locationX: 0,
-        sprite: bulletContainer
-      });
-    });
-    
-    // heatrule
-    series.set("heatRules", [
-      {
-        dataField: "valueX",
-        min: am5.color(0xe5dc36),
-        max: am5.color(0x5faa46),
-        target: series.columns.template,
-        key: "fill"
-      },
-      {
-        dataField: "valueX",
-        min: am5.color(0xe5dc36),
-        max: am5.color(0x5faa46),
-        target: circleTemplate,
-        key: "fill"
-      }
-    ]);
-    
-    series.data.setAll(data);
-    yAxis.data.setAll(data);
-    
-    var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
-    cursor.lineX.set("visible", false);
-    cursor.lineY.set("visible", false);
-    
-    cursor.events.on("cursormoved", function() {
-      var dataItem = series.get("tooltip").dataItem;
-      if (dataItem) {
-        handleHover(dataItem)
-      }
-      else {
-        handleOut();
-      }
-    })
-    
-    // Make stuff animate on load
-    // https://www.amcharts.com/docs/v5/concepts/animations/
-    series.appear();
-    chart.appear(1000, 100);
-    
-    }); // end am5.ready()
-    </script>
 
 </body>
-
 </html>
