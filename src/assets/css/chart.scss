@@ -50,35 +50,56 @@ body {
   right: 0;
   .manager-list {
     li {
-      &:first-child {
-        border-top: 0;
-      }
-      padding: .5rem 1.5rem;
+      padding: .75rem 1.5rem;
       border-top: 1px dotted #cbd0e2;
+      &:last-child {
+        border-bottom: 1px dotted #cbd0e2;
+      }
+      span {
+        max-width: calc(100% - 170px);
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        &:first-child {
+          border-top: 0;
+          width: 70px;
+          max-width: 70px;
+        }
+        &.user {
+          width: 100px;
+          max-width: 100px;
+        }
+      }
     }
     span:nth-child(2), span:nth-child(3) {
       margin-left: 0.5rem;
-      padding-right: 1.5rem;
+      padding-right: 0.5rem;
       padding-left: 0.5rem;
       font-size: 0.96rem;
       border-left: 1px solid #ddd;
     }
   }
-  .fa-square {
-    &.onsite {
-      color: #47BAC1;
+  .check-point {
+    span {
+      font-size: 1rem !important;
     }
-    &.finance {
-      color: #6ED5B3;
-    }
-    &.declaration {
-      color: #F7C44F;
-    }
-    &.onepoint {
-      color: #6B93D0;
-    }
-    &.transaction {
-      color: #fe6d73;
+    .fa-square {
+      padding-right: 5px;
+      &.onsite {
+        color: #47BAC1;
+      }
+      &.finance {
+        color: #6ED5B3;
+      }
+      &.declaration {
+        color: #F7C44F;
+      }
+      &.onepoint {
+        color: #6B93D0;
+      }
+      &.transaction {
+        color: #fe6d73;
+      }
     }
   }
   .calendar {
@@ -93,8 +114,8 @@ body {
       border: 5px solid #fff;
       text-align: center;
       vertical-align: middle !important;
-      padding-top: 1.1rem;
-      padding-bottom: 1rem;
+      padding-top: .5rem;
+      padding-bottom: .5rem;
     }
     td {
       border-radius: 20px;
@@ -121,6 +142,96 @@ body {
   }
 }
 
+.dataCnt {
+  margin: 20px 0;
+  #folder {
+    background: #758cba;
+    top: 12px;
+    left: 18px;
+    border-radius: 0 0 5px 5px;
+    height: 100px;
+    width: 80%;
+    box-shadow: 0 -10px 0 -5px #f3f3f3, 0 -10px 0 0 #3d4d7f, 0 3px 0 0 rgba(0, 0, 0, 0.2);
+    &:before, &:after {
+      content: "";
+      display: block;
+      position: absolute;
+    }
+    &:before {
+      width: 35px;
+      top: -25px;
+      height: 20px;
+      border-bottom: 10px solid #3d4d7f;
+      border-right: 10px solid transparent;
+      z-index: -1;
+    }
+  }
+  .folderTit {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #fff;
+    h3 {
+      font-weight: 600;
+    }
+    span {
+      margin-top: -15px;
+    }
+  }
+  .data-list {
+    margin-top: -10px;
+    li {
+      margin-bottom: 5px;
+      height: 30px;
+      .boardBar.complete {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: #089c28;
+        &::before {
+          content: 'complete';
+          padding: 0 10px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #fff;
+        }
+      }
+    }
+    p {
+      padding-right: 5px;
+      display: inline;
+      width: 100px;
+    }
+  }
+  .risk-box {
+    position: relative;
+    border: 2px solid #f00;
+    &:before {
+      position: absolute;
+      display: block;
+      content: "High Risk Issue";
+      padding: 5px 0;
+      width: 150px;
+      top: -29px;
+      left: -2px;
+      text-align: center;
+      color: #fff;
+      font-size: 1.25rem;
+      font-weight: 700;
+      background-color: #f00;
+    }
+    li:first-child {
+      border-top: unset;
+    }
+    li:last-child {
+      border-bottom: unset;
+    }
+  }
+}
+
 //신규
 
 .fa.success {
@@ -138,13 +249,18 @@ body {
 
 div.results {
   border: 1px solid #ddd;
-  padding: 10px;
+  .table {
+    margin: 0;
+  }
   th, td {
+    font-size: 1rem;
+    font-weight: 700;
     text-align: center;
     vertical-align: middle !important;
   }
   td {
-    display: table-cell
+    display: table-cell;
+    font-weight: 400;
   }
 }
 

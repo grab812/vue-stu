@@ -36,437 +36,188 @@
     </div>
     <div id="subcontent">
           <div class="contents row-2">
-              <div class="container pb10 fixH">
-                  <div class="group" style="padding: 10px 0; height: 250px;"><!-- 20240202 height는 원하시는 크기로 수정 가능합니다. -->
-                      <div class="mainWidget">
-                          <div class="widgetTit dashboardTit d-flex align-items-baseline justify-content-between">
-                              <h3 class="h3_tit">
-                                  점검진행현황
-                              </h3>
-                              <span>2024. 9월말 기준</span>
+            <div class="container pb10 fixH">
+                <div class="group" style="padding: 10px 0; height: 250px;"><!-- 20240202 height는 원하시는 크기로 수정 가능합니다. -->
+                    <div class="mainWidget">
+                        <div class="widgetTit dashboardTit d-flex align-items-baseline justify-content-between">
+                            <h3 class="h3_tit">
+                                점검진행현황
+                            </h3>
+                            <span>2024. 9월말 기준</span>
+                        </div>
+                        <div class="widgetCont dashboardCnt row">
+                          <div class="col-2 d-flex justify-content-center align-items-center">
+                            <h1>
+                              One System
+                            </h1>
                           </div>
-                          <div class="widgetCont dashboardCnt row">
-                            <div class="col-2 d-flex justify-content-center align-items-center">
-                              <h1>
-                                One System
-                              </h1>
-                            </div>
-                            <div class="col-10">
-                              <div class="row">
-                                <div class="col-3 h-100">
-                                  <h4 class="h4_tit tit_noicon">처리율</h4>
-                                  <div id="chartPieDiv1" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
+                          <div class="col-10">
+                            <div class="row">
+                              <div class="col-3 h-100">
+                                <h4 class="h4_tit tit_noicon">처리율</h4>
+                                <div id="chartPieDiv1" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
+                                    CHARTS
+                                </div>
+                              </div>
+                              <div class="col-3 h-100">
+                                  <h4 class="h4_tit tit_noicon">전체 오류 건수</h4>
+                                  <div id="chartPieDiv2" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
                                       CHARTS
                                   </div>
-                                </div>
-                                <div class="col-3 h-100">
-                                    <h4 class="h4_tit tit_noicon">전체 오류 건수</h4>
-                                    <div id="chartPieDiv2" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
-                                        CHARTS
-                                    </div>
-                                </div>
-                                <div class="col-3 h-100">
-                                    <h4 class="h4_tit tit_noicon">웹 오류 건수</h4>
-                                    <div id="chartPieDiv3" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
-                                        CHARTS
-                                    </div>
-                                </div>
-                                <div class="col-3 h-100">
-                                    <h4 class="h4_tit tit_noicon">배치 오류 건수</h4>
-                                    <div id="chartPieDiv4" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
-                                        CHARTS
-                                    </div>
-                                </div>
+                              </div>
+                              <div class="col-3 h-100">
+                                  <h4 class="h4_tit tit_noicon">웹 오류 건수</h4>
+                                  <div id="chartPieDiv3" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
+                                      CHARTS
+                                  </div>
+                              </div>
+                              <div class="col-3 h-100">
+                                  <h4 class="h4_tit tit_noicon">배치 오류 건수</h4>
+                                  <div id="chartPieDiv4" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
+                                      CHARTS
+                                  </div>
                               </div>
                             </div>
                           </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="container pb10 fixH">
-                <div class="group">
-                  <div class="mainWidget">
-                    <div class="widgetTit dashboardTit d-flex align-items-baseline justify-content-between">
-                        <h3 class="h3_tit">
-                          예외 오류 | ITSM SR | 고객 문의
-                        </h3>
-                        <span>2024. 9월말 기준</span>
+                        </div>
                     </div>
-                    <div class="widgetCont dashboardCnt row">
-                      <div class="col-6 mb-4">
-                        <div class="widgetSubInfo row mx-1">
-                          <div class="col-2 d-flex align-items-center justify-content-center chartSubTit">
-                            <h3 class="p-2">
-                              예외오류
-                            </h3>
-                          </div>
-                          <div class="col-10 pl-3">
-                            <div class="d-flex flex-row align-items-center">
-                              <p class="p-2">발생 <span>50</span></p>/
-                              <p class="p-2">해결 <span>10</span></p>
-                            </div>
-                            <div id="chartBarSub1" class="chartBox" style="height: 50px;"><!-- height는 원하시는 크기로 수정 가능합니다. -->
-                              CHARTS
-                            </div>
-                          </div>
+                </div>
+            </div>
+            <div class="container pb10 fixH">
+              <div class="group">
+                <div class="mainWidget">
+                  <div class="widgetTit dashboardTit d-flex align-items-baseline justify-content-between">
+                      <h3 class="h3_tit">
+                        예외오류 | ITSM SR | 고객 문의 | 월 작업 Check
+                      </h3>
+                      <span>2024. 9월말 기준</span>
+                  </div>
+                  <div class="widgetCont dashboardCnt row mx-3">
+                    <div class="col-6 p-2">
+                      <div class="widgetSubInfo row mx-3">
+                        <div class="col-2 d-flex align-items-center justify-content-center chartSubTit">
+                          <h3 class="p-3">
+                            예외오류
+                          </h3>
                         </div>
-                        <div>
-                          <div class="mt-2 table-responsive results" id="header-table">
-                            <!-- tabela -->
-                            <table id="tabela1" class="table" width="100%" tabindex="0" aria-label="results">                               
-                              <thead>                           
-                                <tr>
-                                  <th tabindex="0">
-                                    Onesystem
-                                  </th>
-                                  <th tabindex="0">
-                                    대기
-                                  </th>
-                                  <th tabindex="0">
-                                    접수
-                                  </th>                   
-                                  <th tabindex="0">
-                                    보류
-                                  </th>
-                                  <th tabindex="0">
-                                    해결
-                                  </th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td tabindex="0">
-                                    BizOne
-                                  </td>
-                                  <td tabindex="0">
-                                    10
-                                  </td>
-                                  <td tabindex="0">
-                                    -
-                                  </td>   
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                </tr>
-                                <tr>
-                                  <td tabindex="0">
-                                    MediaOne
-                                  </td>
-                                  <td tabindex="0">
-                                    10
-                                  </td>
-                                  <td tabindex="0">
-                                    -
-                                  </td>   
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                </tr>
-                                <tr>
-                                  <td tabindex="0">
-                                    MovieOne
-                                  </td>
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                  <td tabindex="0">
-                                    10
-                                  </td>  
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                </tr>
-                                <tr>
-                                  <td tabindex="0">
-                                    MusicOne
-                                  </td>
-                                  <td tabindex="0">
-                                    -
-                                  </td>   
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                  <td tabindex="0">
-                                    10
-                                  </td>
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                </tr>
-                                <tr>
-                                  <td tabindex="0">
-                                    DMP
-                                  </td>
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                  <td tabindex="0">
-                                    10
-                                  </td>  
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                </tr>
-                              </tbody>
-                            </table>
-                            <!-- end table -->
+                        <div class="col-10 pl-3">
+                          <div class="d-flex flex-row align-items-center">
+                            <p class="p-2">발생 <span>50</span></p>/
+                            <p class="p-2">해결 <span>10</span></p>
+                          </div>
+                          <div id="chartBarSub1" class="chartBox" style="height: 50px;"><!-- height는 원하시는 크기로 수정 가능합니다. -->
+                            CHARTS
                           </div>
                         </div>
                       </div>
-                      <div class="col-6 mb-4">
-                        <div class="widgetSubInfo row mx-1">
-                          <div class="col-2 d-flex align-items-center justify-content-center chartSubTit">
-                            <h3 class="p-2">
-                              ITSM SR
-                            </h3>
-                          </div>
-                          <div class="col-10 pl-3 d-flex align-items-center">
-                            <div class="d-flex flex-row align-items-center">
-                              <p class="p-2">신규 <span>20</span></p>/
-                              <p class="p-2">대기 <span>10</span></p>/
-                              <p class="p-2">배포 <span>2</span></p>
-                            </div>
-                          </div>
-                        </div>
-                        <div>
-                          <div class="mt-2 table-responsive results" id="header-table">
-                            <!-- tabela -->
-                            <table id="tabela1" class="table" width="100%" tabindex="0" aria-label="results">                               
-                              <thead>                           
-                                <tr>
-                                  <th tabindex="0">
-                                    Onesystem
-                                  </th>
-                                  <th tabindex="0">
-                                    대기
-                                  </th>
-                                  <th tabindex="0">
-                                    접수
-                                  </th>                   
-                                  <th tabindex="0">
-                                    보류
-                                  </th>
-                                  <th tabindex="0">
-                                    해결
-                                  </th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td tabindex="0">
-                                    BizOne
-                                  </td>
-                                  <td tabindex="0">
-                                    10
-                                  </td>
-                                  <td tabindex="0">
-                                    -
-                                  </td>   
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                </tr>
-                                <tr>
-                                  <td tabindex="0">
-                                    MediaOne
-                                  </td>
-                                  <td tabindex="0">
-                                    10
-                                  </td>
-                                  <td tabindex="0">
-                                    -
-                                  </td>   
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                </tr>
-                                <tr>
-                                  <td tabindex="0">
-                                    MovieOne
-                                  </td>
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                  <td tabindex="0">
-                                    10
-                                  </td>  
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                </tr>
-                                <tr>
-                                  <td tabindex="0">
-                                    MusicOne
-                                  </td>
-                                  <td tabindex="0">
-                                    -
-                                  </td>   
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                  <td tabindex="0">
-                                    10
-                                  </td>
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                </tr>
-                                <tr>
-                                  <td tabindex="0">
-                                    DMP
-                                  </td>
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                  <td tabindex="0">
-                                    10
-                                  </td>  
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                  <td tabindex="0">
-                                    -
-                                  </td> 
-                                </tr>
-                              </tbody>
-                            </table>
-                            <!-- end table -->
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-6 mb-4">
-                        <div class="widgetSubInfo row mx-1">
-                          <div class="col-2 d-flex align-items-center justify-content-center chartSubTit">
-                            <h3 class="p-2">
-                              고객 문의
-                            </h3>
-                          </div>
-                          <div class="col-10 pl-3 d-flex align-items-center">
-                            <div class="d-flex flex-row align-items-center">
-                              <p class="p-2">신규 <span>5건</span></p>/
-                              <p class="p-2">해결 <span>1건 (20%)</span></p>
-                            </div>
-                          </div>
-                        </div>
-                        <div>
-                          <div class="mt-2 manager">
-                            <ul class="manager-list">
-                              <li>
-                                <span>10:20:25</span><span>문의유형 비전 초기화 요청드립니다.</span><span>김고객 대기중</span>
-                              </li>
-                              <li>
-                                <span>10:20:25</span><span>문의유형 비전 초기화 요청드립니다.</span><span>김고객 대기중</span>
-                              </li>
-                              <li>
-                                <span>10:20:25</span><span>문의유형 비전 초기화 요청드립니다.</span><span>김고객 대기중</span>
-                              </li>
-                              <li>
-                                <span>10:20:25</span><span>문의유형 비전 초기화 요청드립니다.</span><span>김고객 대기중</span>
-                              </li>
-                              <li>
-                                <span>10:20:25</span><span>문의유형 비전 초기화 요청드립니다.</span><span>김고객 대기중</span>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-6 mb-4">
-                        <div class="widgetSubInfo row mx-1">
-                          <div class="col-2 d-flex align-items-center justify-content-center chartSubTit">
-                            <h3 class="p-2">
-                              월 작업 Check
-                            </h3>
-                          </div>
-                          <div class="col-10 pl-3 d-flex align-items-center">
-                            <div class="check-point">
-                              <span class="pr-2"><i class="fa fa-square onsite" aria-hidden="true"></i>현업</span>
-                              <span class="pr-2"><i class="fa fa-square finance" aria-hidden="true"></i>재무</span>
-                              <span class="pr-2"><i class="fa fa-square declaration" aria-hidden="true"></i>계산서신고</span>
-                              <span class="pr-2"><i class="fa fa-square onepoint" aria-hidden="true"></i>원포인트</span>
-                              <span class="pr-2"><i class="fa fa-square transaction" aria-hidden="true"></i>내부거래</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div>
+                      <div class="p-2">
+                        <div class="mt-2 table-responsive results" id="header-table">
                           <!-- tabela -->
-                          <table id="calendar" class="calendar" width="100%" tabindex="0">                               
+                          <table id="tabela1" class="table" width="100%" tabindex="0" aria-label="results">                               
                             <thead>                           
                               <tr>
-                                <th tabindex="0">Sun</th>
-                                <th tabindex="0">Mon</th>
-                                <th tabindex="0">Tue</th>
-                                <th tabindex="0">Wed</th>
-                                <th tabindex="0">Thu</th>
-                                <th tabindex="0">Fri</th>
-                                <th tabindex="0">Sat</th>
+                                <th tabindex="0">
+                                  Onesystem
+                                </th>
+                                <th tabindex="0">
+                                  대기
+                                </th>
+                                <th tabindex="0">
+                                  접수
+                                </th>                   
+                                <th tabindex="0">
+                                  보류
+                                </th>
+                                <th tabindex="0">
+                                  해결
+                                </th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
-                                <td tabindex="0"></td>
-                                <td tabindex="0"></td>
-                                <td tabindex="0"></td>   
-                                <td tabindex="0"></td>
-                                <td tabindex="0">1</td>
-                                <td tabindex="0">2</td>
-                                <td tabindex="0">3</td>
+                                <td tabindex="0">
+                                  BizOne
+                                </td>
+                                <td tabindex="0">
+                                  10
+                                </td>
+                                <td tabindex="0">
+                                  -
+                                </td>   
+                                <td tabindex="0">
+                                  -
+                                </td> 
+                                <td tabindex="0">
+                                  -
+                                </td> 
                               </tr>
                               <tr>
-                                <td tabindex="0">4</td>
-                                <td tabindex="0" class="onsite">5</td>
-                                <td tabindex="0">6</td>   
-                                <td tabindex="0" class="finance">7</td>
-                                <td tabindex="0">8</td>
-                                <td tabindex="0">9</td>
-                                <td tabindex="0">10</td>
+                                <td tabindex="0">
+                                  MediaOne
+                                </td>
+                                <td tabindex="0">
+                                  10
+                                </td>
+                                <td tabindex="0">
+                                  -
+                                </td>   
+                                <td tabindex="0">
+                                  -
+                                </td> 
+                                <td tabindex="0">
+                                  -
+                                </td> 
                               </tr>
                               <tr>
-                                <td tabindex="0">11</td>
-                                <td tabindex="0">12</td>
-                                <td tabindex="0">13</td>
-                                <td tabindex="0">14</td>
-                                <td tabindex="0">15</td>
-                                <td tabindex="0">16</td>
-                                <td tabindex="0">17</td>
+                                <td tabindex="0">
+                                  MovieOne
+                                </td>
+                                <td tabindex="0">
+                                  -
+                                </td> 
+                                <td tabindex="0">
+                                  10
+                                </td>  
+                                <td tabindex="0">
+                                  -
+                                </td> 
+                                <td tabindex="0">
+                                  -
+                                </td> 
                               </tr>
                               <tr>
-                                <td tabindex="0">18</td>
-                                <td tabindex="0">19</td>
-                                <td tabindex="0">20</td>
-                                <td tabindex="0">21</td>
-                                <td tabindex="0">22</td>
-                                <td tabindex="0">23</td>
-                                <td tabindex="0">24</td>
+                                <td tabindex="0">
+                                  MusicOne
+                                </td>
+                                <td tabindex="0">
+                                  -
+                                </td>   
+                                <td tabindex="0">
+                                  -
+                                </td> 
+                                <td tabindex="0">
+                                  10
+                                </td>
+                                <td tabindex="0">
+                                  -
+                                </td> 
                               </tr>
                               <tr>
-                                <td tabindex="0">25</td>
-                                <td tabindex="0">26</td>
-                                <td tabindex="0">27</td>
-                                <td tabindex="0">28</td>
-                                <td tabindex="0">29</td>
-                                <td tabindex="0">30</td>
-                                <td tabindex="0">31</td>
+                                <td tabindex="0">
+                                  DMP
+                                </td>
+                                <td tabindex="0">
+                                  -
+                                </td> 
+                                <td tabindex="0">
+                                  10
+                                </td>  
+                                <td tabindex="0">
+                                  -
+                                </td> 
+                                <td tabindex="0">
+                                  -
+                                </td> 
                               </tr>
                             </tbody>
                           </table>
@@ -474,8 +225,443 @@
                         </div>
                       </div>
                     </div>
+                    <div class="col-6 p-2">
+                      <div class="widgetSubInfo row mx-3">
+                        <div class="col-2 d-flex align-items-center justify-content-center chartSubTit">
+                          <h3 class="p-3">
+                            ITSM SR
+                          </h3>
+                        </div>
+                        <div class="col-10 pl-3 d-flex align-items-center">
+                          <div class="d-flex flex-row align-items-center">
+                            <p class="p-2">신규 <span>20</span></p>/
+                            <p class="p-2">대기 <span>10</span></p>/
+                            <p class="p-2">배포 <span>2</span></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="p-2">
+                        <div class="mt-2 table-responsive results" id="header-table">
+                          <!-- tabela -->
+                          <table id="tabela1" class="table" width="100%" tabindex="0" aria-label="results">                               
+                            <thead>                           
+                              <tr>
+                                <th tabindex="0">
+                                  Onesystem
+                                </th>
+                                <th tabindex="0">
+                                  대기
+                                </th>
+                                <th tabindex="0">
+                                  접수
+                                </th>                   
+                                <th tabindex="0">
+                                  보류
+                                </th>
+                                <th tabindex="0">
+                                  해결
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td tabindex="0">
+                                  BizOne
+                                </td>
+                                <td tabindex="0">
+                                  10
+                                </td>
+                                <td tabindex="0">
+                                  -
+                                </td>   
+                                <td tabindex="0">
+                                  -
+                                </td> 
+                                <td tabindex="0">
+                                  -
+                                </td> 
+                              </tr>
+                              <tr>
+                                <td tabindex="0">
+                                  MediaOne
+                                </td>
+                                <td tabindex="0">
+                                  10
+                                </td>
+                                <td tabindex="0">
+                                  -
+                                </td>   
+                                <td tabindex="0">
+                                  -
+                                </td> 
+                                <td tabindex="0">
+                                  -
+                                </td> 
+                              </tr>
+                              <tr>
+                                <td tabindex="0">
+                                  MovieOne
+                                </td>
+                                <td tabindex="0">
+                                  -
+                                </td> 
+                                <td tabindex="0">
+                                  10
+                                </td>  
+                                <td tabindex="0">
+                                  -
+                                </td> 
+                                <td tabindex="0">
+                                  -
+                                </td> 
+                              </tr>
+                              <tr>
+                                <td tabindex="0">
+                                  MusicOne
+                                </td>
+                                <td tabindex="0">
+                                  -
+                                </td>   
+                                <td tabindex="0">
+                                  -
+                                </td> 
+                                <td tabindex="0">
+                                  10
+                                </td>
+                                <td tabindex="0">
+                                  -
+                                </td> 
+                              </tr>
+                              <tr>
+                                <td tabindex="0">
+                                  DMP
+                                </td>
+                                <td tabindex="0">
+                                  -
+                                </td> 
+                                <td tabindex="0">
+                                  10
+                                </td>  
+                                <td tabindex="0">
+                                  -
+                                </td> 
+                                <td tabindex="0">
+                                  -
+                                </td> 
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!-- end table -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 p-2">
+                      <div class="widgetSubInfo row mx-3">
+                        <div class="col-2 d-flex align-items-center justify-content-center chartSubTit">
+                          <h3 class="p-3">
+                            고객 문의
+                          </h3>
+                        </div>
+                        <div class="col-10 pl-3 d-flex align-items-center">
+                          <div class="d-flex flex-row align-items-center">
+                            <p class="p-2">신규 <span>5건</span></p>/
+                            <p class="p-2">해결 <span>1건 (20%)</span></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="p-2">
+                        <div class="mt-2 manager">
+                          <ul class="manager-list">
+                            <li class="d-flex">
+                              <span>10:20:25</span><span>문의유형 비전 초기화 요청드립니다.문의유형 비전 초기화 요청드립니다.문의유형 비전 초기화 요청드립니다.문의유형 비전 초기화 요청드립니다.문의유형 비전 초기화 요청드립니다.문의유형 비전 초기화 요청드립니다.</span><span class="user ml-auto">김고객 대기중</span>
+                            </li>
+                            <li class="d-flex">
+                              <span>10:20:25</span><span>문의유형 비전 초기화 요청드립니다.</span><span class="user ml-auto">김아무개 대기중</span>
+                            </li>
+                            <li class="d-flex">
+                              <span>10:20:25</span><span>문의유형 비전 초기화 요청드립니다.</span><span class="user ml-auto">김고객 대기중</span>
+                            </li>
+                            <li class="d-flex">
+                              <span>10:20:25</span><span>문의유형 비전 초기화 요청드립니다.</span><span class="user ml-auto">김고객 대기중</span>
+                            </li>
+                            <li class="d-flex">
+                              <span>10:20:25</span><span>문의유형 비전 초기화 요청드립니다.</span><span class="user ml-auto">김고객 대기중</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 p-2">
+                      <div class="widgetSubInfo row mx-3">
+                        <div class="col-2 d-flex align-items-center justify-content-center chartSubTit">
+                          <h3 class="p-3">
+                            월 작업 Check
+                          </h3>
+                        </div>
+                        <div class="col-10 pr-5 d-flex align-items-end">
+                          <div class="check-point ml-auto mb-2">
+                            <span class="pr-2"><i class="fa fa-square onsite" aria-hidden="true"></i>현업</span>
+                            <span class="pr-2"><i class="fa fa-square finance" aria-hidden="true"></i>재무</span>
+                            <span class="pr-2"><i class="fa fa-square declaration" aria-hidden="true"></i>계산서신고</span>
+                            <span class="pr-2"><i class="fa fa-square onepoint" aria-hidden="true"></i>원포인트</span>
+                            <span class="pr-2"><i class="fa fa-square transaction" aria-hidden="true"></i>내부거래</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="px-5">
+                        <!-- tabela -->
+                        <table id="calendar" class="calendar" width="100%" tabindex="0">                               
+                          <thead>                           
+                            <tr>
+                              <th tabindex="0">Sun</th>
+                              <th tabindex="0">Mon</th>
+                              <th tabindex="0">Tue</th>
+                              <th tabindex="0">Wed</th>
+                              <th tabindex="0">Thu</th>
+                              <th tabindex="0">Fri</th>
+                              <th tabindex="0">Sat</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td tabindex="0"></td>
+                              <td tabindex="0"></td>
+                              <td tabindex="0"></td>   
+                              <td tabindex="0"></td>
+                              <td tabindex="0">1</td>
+                              <td tabindex="0">2</td>
+                              <td tabindex="0">3</td>
+                            </tr>
+                            <tr>
+                              <td tabindex="0">4</td>
+                              <td tabindex="0" class="onsite">5</td>
+                              <td tabindex="0">6</td>   
+                              <td tabindex="0" class="finance">7</td>
+                              <td tabindex="0">8</td>
+                              <td tabindex="0">9</td>
+                              <td tabindex="0">10</td>
+                            </tr>
+                            <tr>
+                              <td tabindex="0">11</td>
+                              <td tabindex="0">12</td>
+                              <td tabindex="0">13</td>
+                              <td tabindex="0">14</td>
+                              <td tabindex="0">15</td>
+                              <td tabindex="0">16</td>
+                              <td tabindex="0">17</td>
+                            </tr>
+                            <tr>
+                              <td tabindex="0">18</td>
+                              <td tabindex="0">19</td>
+                              <td tabindex="0">20</td>
+                              <td tabindex="0">21</td>
+                              <td tabindex="0">22</td>
+                              <td tabindex="0">23</td>
+                              <td tabindex="0">24</td>
+                            </tr>
+                            <tr>
+                              <td tabindex="0">25</td>
+                              <td tabindex="0">26</td>
+                              <td tabindex="0">27</td>
+                              <td tabindex="0">28</td>
+                              <td tabindex="0">29</td>
+                              <td tabindex="0">30</td>
+                              <td tabindex="0">31</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- end table -->
+                      </div>
+                      <div class="px-5">
+                        <div class="mt-2 manager">
+                          <ul class="manager-list">
+                            <li class="d-flex">
+                              <span>8.21</span><span>AIP 작업전환 (10:00 ~ 11:00) 공지사항 연계 또는 별도 테이블</span>
+                            </li>
+                            <li class="d-flex">
+                              <span>8.21</span><span>AIP 작업전환 (10:00 ~ 11:00)</span>
+                            </li>
+                            <li class="d-flex">
+                              <span>8.21</span><span>AIP 작업전환 (10:00 ~ 11:00)</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="container pb10 fixH">
+              <div class="group">
+                <div class="mainWidget">
+                  <div class="widgetTit dashboardTit d-flex align-items-baseline justify-content-between">
+                      <h3 class="h3_tit">
+                        예외오류 | ITSM SR | 고객 문의 | 월 작업 Check
+                      </h3>
+                      <span>2024. 9월말 기준</span>
+                  </div>
+                  <div class="widgetCont dashboardCnt row mx-3">
+                    <div class="col-6 p-2">
+                      <div class="dataCnt row mx-3 justify-content-between">
+                        <div class="col-4">
+                          <div id="folder">
+                            <div class="folderTit">
+                              <h3>HR</h3>
+                              <span>(실행시각 07:00)</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-8 pl-3">
+                          <ul class="data-list">
+                            <li class="d-flex align-items-center">
+                              <p>사원</p>
+                              <div>
+                                <p>사원<span>1200</span>명/ </p>
+                                <p>퇴직<span>20</span>명/ </p>
+                                <p>휴직<span>10</span>명/ </p>
+                                <p>부문이동<span>10</span>명/ </p>
+                                <p>부서이동<span>10</span>명</p>
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>사용자</p>
+                              <div>
+                                <p><span>1300</span>명</p>
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>HR부서</p>
+                              <div>
+                                <p><span>40</span>개</p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 p-2">
+                      <div class="dataCnt">
+                        <div class="risk-box">
+                          <ul class="manager-list">
+                            <li class="d-flex">
+                              <span>10:20:25</span><span>문의유형 비전 초기화 요청드립니다.문의유형 비전 초기화 요청드립니다.문의유형 비전 초기화 요청드립니다.문의유형 비전 초기화 요청드립니다.문의유형 비전 초기화 요청드립니다.문의유형 비전 초기화 요청드립니다.</span><span class="user ml-auto">김고객 대기중</span>
+                            </li>
+                            <li class="d-flex">
+                              <span>10:20:25</span><span>문의유형 비전 초기화 요청드립니다.</span><span class="user ml-auto">김아무개 대기중</span>
+                            </li>
+                            <li class="d-flex">
+                              <span>10:20:25</span><span>문의유형 비전 초기화 요청드립니다.</span><span class="user ml-auto">김고객 대기중</span>
+                            </li>
+                            <li class="d-flex">
+                              <span>10:20:25</span><span>문의유형 비전 초기화 요청드립니다.</span><span class="user ml-auto">김고객 대기중</span>
+                            </li>
+                            <li class="d-flex">
+                              <span>10:20:25</span><span>문의유형 비전 초기화 요청드립니다.</span><span class="user ml-auto">김고객 대기중</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 p-2">
+                      <div class="dataCnt row mx-3 justify-content-between">
+                        <div class="col-4">
+                          <div id="folder">
+                            <div class="folderTit">
+                              <h3>DATA</h3>
+                              <span>총 50건/ 36건 진행/ 14건 대기</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-8 pl-3">
+                          <ul class="data-list">
+                            <li class="d-flex align-items-center">
+                              <p>BizOne</p>
+                              <div id="boardBar1" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>BroadOne</p>
+                              <div id="boardBar1" class="boardBar complete"></div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>MediaOne</p>
+                              <div id="boardBar1" class="boardBar complete"></div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>MovieOne</p>
+                              <div id="boardBar1" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>MusicOne</p>
+                              <div id="boardBar1" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>DMP</p>
+                              <div id="boardBar1" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 p-2">
+                      <div class="dataCnt row mx-3 justify-content-between">
+                        <div class="col-4">
+                          <div id="folder">
+                            <div class="folderTit">
+                              <h3>BATCH</h3>
+                              <span>총 50건/ 36건 진행/ 14건 대기</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-8 pl-3">
+                          <ul class="data-list">
+                            <li class="d-flex align-items-center">
+                              <p>BizOne</p>
+                              <div id="boardBar1" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>BroadOne</p>
+                              <div id="boardBar1" class="boardBar complete"></div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>MediaOne</p>
+                              <div id="boardBar1" class="boardBar complete"></div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>MovieOne</p>
+                              <div id="boardBar1" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>MusicOne</p>
+                              <div id="boardBar1" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>DMP</p>
+                              <div id="boardBar1" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
     </div>
