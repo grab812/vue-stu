@@ -1,45 +1,21 @@
 html,
 body {
-	height: 100%;
-}
-
-body {
-	margin: 0;
-	font-family: 'Nanum Gothic','Roboto', sans-serif, arial;
-	background: #fff;
-	font-family: sans-serif;
-	font-weight: 100;
-}
-
-.subWidget {
-  height: calc(100% - 59px);
-}
-
-.subWidget .group {
   height: 100%;
 }
 
-.widgetSubInfo {
-  .chartSubTit {
-    height: 80px;
-    font-weight: 500;
-    color: #fff;
-    background: linear-gradient(145deg, #536cac 20%, #5090bf 84%);
-    border-radius: 10px;
-    h3 {
-      font-size: 1.5rem;
-    }
-  }
-  p, span {
-    font-size: 1.25rem !important;
-    color: #000;
-    font-weight: 500;
-  }
+body {
+  margin: 0;
+  font-family: 'Nanum Gothic', 'Roboto', sans-serif, arial;
+  background: #fff;
+  font-family: sans-serif;
+  font-weight: 100;
 }
 
+// (공통) 타이틀/컨텐츠
 .dashboardTit {
   position: relative;
 }
+
 .dashboardCnt {
   font-weight: 500;
   padding-top: 10px;
@@ -48,30 +24,37 @@ body {
   bottom: unset;
   left: 0;
   right: 0;
+
   .manager-list {
     li {
       padding: .75rem 1.5rem;
       border-top: 1px dotted #cbd0e2;
+
       &:last-child {
         border-bottom: 1px dotted #cbd0e2;
       }
+
       span {
         max-width: calc(100% - 170px);
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
+
         &:first-child {
           border-top: 0;
           width: 70px;
           max-width: 70px;
         }
+
         &.user {
           width: 100px;
           max-width: 100px;
         }
       }
     }
-    span:nth-child(2), span:nth-child(3) {
+
+    span:nth-child(2),
+    span:nth-child(3) {
       margin-left: 0.5rem;
       padding-right: 0.5rem;
       padding-left: 0.5rem;
@@ -79,37 +62,48 @@ body {
       border-left: 1px solid #ddd;
     }
   }
+
   .check-point {
     span {
       font-size: 1rem !important;
     }
+
     .fa-square {
       padding-right: 5px;
+
       &.onsite {
         color: #47BAC1;
       }
+
       &.finance {
         color: #6ED5B3;
       }
+
       &.declaration {
         color: #F7C44F;
       }
+
       &.onepoint {
         color: #6B93D0;
       }
+
       &.transaction {
         color: #fe6d73;
       }
     }
   }
+
   .calendar {
     width: 100%;
     margin-bottom: 1rem;
     color: #212529;
+
     thead th {
       border-top: none;
     }
-    th, td {
+
+    th,
+    td {
       font-size: 1rem;
       border: 5px solid #fff;
       text-align: center;
@@ -117,24 +111,35 @@ body {
       padding-top: .5rem;
       padding-bottom: .5rem;
     }
+
     td {
       border-radius: 20px;
       background-color: #f1f1f1;
-      &.onsite, &.finance, &.declaration, &.onepoint, &.transaction {
-        color:#fff;
+
+      &.onsite,
+      &.finance,
+      &.declaration,
+      &.onepoint,
+      &.transaction {
+        color: #fff;
       }
+
       &.onsite {
         background-color: #47BAC1;
       }
+
       &.finance {
         background-color: #6ED5B3;
       }
+
       &.declaration {
         background-color: #F7C44F;
       }
+
       &.onepoint {
         background-color: #6B93D0;
       }
+
       &.transaction {
         background-color: #fe6d73;
       }
@@ -142,287 +147,160 @@ body {
   }
 }
 
-.dataCnt {
-  margin: 20px 0;
-  #folder {
-    background: #758cba;
-    top: 12px;
-    left: 18px;
-    border-radius: 0 0 5px 5px;
-    height: 100px;
-    width: 80%;
-    box-shadow: 0 -10px 0 -5px #f3f3f3, 0 -10px 0 0 #3d4d7f, 0 3px 0 0 rgba(0, 0, 0, 0.2);
-    &:before, &:after {
-      content: "";
-      display: block;
-      position: absolute;
-    }
-    &:before {
-      width: 35px;
-      top: -25px;
-      height: 20px;
-      border-bottom: 10px solid #3d4d7f;
-      border-right: 10px solid transparent;
-      z-index: -1;
-    }
-  }
-  .folderTit {
-    height: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    color: #fff;
-    h3 {
-      font-weight: 600;
-    }
-    span {
-      margin-top: -15px;
-    }
-  }
-  .data-list {
-    margin-top: -10px;
-    li {
-      margin-bottom: 5px;
-      height: 30px;
-      .boardBar.complete {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        background-color: #089c28;
-        &::before {
-          content: 'complete';
-          padding: 0 10px;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          color: #fff;
-        }
+// 예외오류, ITSM SR, 고객문의, 월작업Check
+.dashboard-table {
+  .widgetSubInfo {
+    .chartSubTit {
+      height: 80px;
+      font-weight: 500;
+      color: #fff;
+      background: linear-gradient(145deg, #536cac 20%, #5090bf 84%);
+      border-radius: 10px;
+
+      h3 {
+        font-size: 1.5rem;
       }
     }
-    p {
-      padding-right: 5px;
-      display: inline;
-      width: 100px;
+
+    p,
+    span {
+      font-size: 1.25rem !important;
+      color: #000;
+      font-weight: 500;
     }
   }
-  .risk-box {
-    position: relative;
-    border: 2px solid #f00;
-    &:before {
-      position: absolute;
-      display: block;
-      content: "High Risk Issue";
-      padding: 5px 0;
-      width: 150px;
-      top: -29px;
-      left: -2px;
-      text-align: center;
-      color: #fff;
-      font-size: 1.25rem;
+
+  div.results {
+    border: 1px solid #ddd;
+
+    .table {
+      margin: 0;
+    }
+
+    th,
+    td {
+      font-size: 1rem;
       font-weight: 700;
-      background-color: #f00;
+      text-align: center;
+      vertical-align: middle !important;
     }
-    li:first-child {
-      border-top: unset;
+
+    td {
+      display: table-cell;
+      font-weight: 400;
     }
-    li:last-child {
-      border-bottom: unset;
+  }
+
+  .datePick {
+    button {
+      padding: 5px 10px;
+      background-color: transparent;
     }
-  }
-}
 
-//신규
-
-.fa.success {
-  color: #00c851;
-}
-.fa.danger {
-  color: #ff3547;
-}
-.fa.notice {
-  color: #ff9800;
-}
-.fa-spinner {
-  color: #003049;
-}
-
-div.results {
-  border: 1px solid #ddd;
-  .table {
-    margin: 0;
-  }
-  th, td {
-    font-size: 1rem;
-    font-weight: 700;
-    text-align: center;
-    vertical-align: middle !important;
-  }
-  td {
-    display: table-cell;
-    font-weight: 400;
-  }
-}
-
-#tabela1_wrapper {
-  margin-top: 2rem;
-
-  td {
-    font-size: 0.8rem;
-    font-weight: 400;
-  }
-
-  tbody > tr:hover {
-    background-color: #eee;
-  }
-}
-
-div.table-responsive > div.dataTables_wrapper > div.row {
-  display: block;
-}
-
-/*table collapsed*/
-
-.level1 {
-  margin-bottom: 0;
-}
-
-/*badge*/
-
-.badge {
-  font-size: small;
-  font-weight: 300;
-}
-
-/*tooltip*/
-/* Tooltip CSS */
-/* START TOOLTIP STYLES */
-
-[tooltip] {
-  position: relative;
-
-  /* opinion 1 */
-
-  &::before, &::after {
-    text-transform: none;
-
-    /* opinion 2 */
-    font-size: 1.2em;
-
-    /* opinion 3 */
-    line-height: 1;
-    user-select: none;
-    pointer-events: none;
-    position: absolute;
-    display: block;
-    opacity: 0;
-  }
-
-  &::before {
-    content: '';
-    border: 5px solid transparent;
-
-    /* opinion 4 */
-    z-index: 999999;
-
-    /* absurdity 1 */
-  }
-
-  &::after {
-    content: attr(tooltip);
-
-    /* magic! */
-    text-align: center;
-
-    /* 
-      Let the content set the size of the tooltips 
-      but this will also keep them from being obnoxious
-      */
-    min-width: 3em;
-    max-width: 21em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding: 1ch 1.5ch;
-    border-radius: .3ch;
-    box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
-    background: #333;
-    color: #fff;
-    z-index: 999999;
-
-    /* absurdity 2 */
-  }
-
-  &:hover {
-    &::before, &::after {
-      display: block;
+    p {
+      margin: 0 10px;
+      font-size: 1.5rem;
+      font-weight: 600;
     }
   }
 }
 
-/* Applies to all tooltips */
+// 하단차트
+.dashboard-chart {
+  .dataCnt {
+    margin: 20px 0;
 
-/* Make the tooltips respond to hover */
+    #folder {
+      background: #758cba;
+      top: 12px;
+      left: 18px;
+      border-radius: 0 0 5px 5px;
+      height: 100px;
+      width: 80%;
+      box-shadow: 0 -10px 0 -5px #f3f3f3, 0 -10px 0 0 #3d4d7f, 0 3px 0 0 rgba(0, 0, 0, 0.2);
 
-/* don't show empty tooltips */
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+      }
 
-[tooltip=''] {
-  &::before, &::after {
-    display: none !important;
-  }
-}
-
-/* FLOW: UP */
-
-[tooltip] {
-  &:not([flow])::before, &[flow^="up"]::before {
-    bottom: 100%;
-    border-bottom-width: 0;
-    border-top-color: #333;
-  }
-
-  &:not([flow])::after, &[flow^="up"]::after {
-    bottom: calc(100% + 5px);
-  }
-
-  &:not([flow]) {
-    &::before, &::after {
-      left: 50%;
-      transform: translate(-50%, -0.5em);
+      &:before {
+        width: 35px;
+        top: -25px;
+        height: 20px;
+        border-bottom: 10px solid #3d4d7f;
+        border-right: 10px solid transparent;
+        z-index: -1;
+      }
     }
-  }
 
-  &[flow^="up"] {
-    &::before, &::after {
-      left: 50%;
-      transform: translate(-50%, -0.5em);
+    .folderTit {
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      color: #fff;
+
+      h3 {
+        font-weight: 600;
+      }
+
+      span {
+        margin-top: -15px;
+      }
     }
-  }
 
-  &:not([flow]):hover {
-    &::before, &::after {
-      animation: tooltips-vert 300ms ease-out forwards;
+    .data-list {
+      margin-top: -10px;
+
+      li {
+        margin-bottom: 5px;
+        height: 30px;
+
+        .boardBar {
+          width: 100%;
+          height: inherit;
+        }
+      }
+
+      p {
+        padding-right: 5px;
+        display: inline;
+        width: 100px;
+        font-weight: 600;
+        letter-spacing: -.5px;
+      }
     }
-  }
 
-  &[flow^="up"]:hover {
-    &::before, &::after {
-      animation: tooltips-vert 300ms ease-out forwards;
+    .risk-box {
+      position: relative;
+      border: 2px solid #f00;
+
+      &:before {
+        position: absolute;
+        display: block;
+        content: "High Risk Issue";
+        padding: 5px 0;
+        width: 150px;
+        top: -29px;
+        left: -2px;
+        text-align: center;
+        color: #fff;
+        font-size: 1.25rem;
+        font-weight: 700;
+        background-color: #f00;
+      }
+
+      li:first-child {
+        border-top: unset;
+      }
+
+      li:last-child {
+        border-bottom: unset;
+      }
     }
-  }
-}
-
-/* KEYFRAMES */
-@keyframes tooltips-vert {
-  to {
-    opacity: .9;
-    transform: translate(-50%, 0);
-  }
-}
-
-@keyframes tooltips-horz {
-  to {
-    opacity: .9;
-    transform: translate(0, -50%);
   }
 }

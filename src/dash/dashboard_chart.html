@@ -3,40 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet"  href="./assets/css/all.min.css" >
-	<link rel="stylesheet" href="./assets/css/layout.css">
+  <!-- 기존 bizone 반영 CSS -->
+	<link rel="stylesheet" href="./assets/css/all.min.css" >
 	<link rel="stylesheet" href="./assets/css/default.css">
+	<link rel="stylesheet" href="./assets/css/layout.css">
 	<link rel="stylesheet" href="./assets/css/button.css">
 	<link rel="stylesheet" href="./assets/css/bootstrap_modify.css">
-  <link rel="stylesheet" href="./assets/css/AUIGrid_style.css">
-	<link rel="stylesheet" href="./assets/css/AUIGrid_custom.css">
-	<link rel="stylesheet" href="./assets/css/AUIPivot_style.css">
-	<link rel="stylesheet" href="./assets/css/AUIPivot_custom.css">
+  <!--// 기존 bizone 반영 CSS -->
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <!-- 24.08 대시보드_차트 추가 CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"> -->
-  <!-- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.amber-pink.min.css"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.6.0/css/mdb.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="./assets/css/chart.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
-  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-  <title>Document</title>
+  <!-- // 24.08 대시보드_차트 CSS -->
+  <title>장애예방활동 모니터링 시스템 - Today's system check</title>
 </head>
 <body>
   
   <div class="contentWrap">
     <div class="titWrap">
-      <h2 class="h2_tit">Today's systme check</h2>
+      <h2 class="h2_tit">Today's system check</h2>
     </div>
     <div id="subcontent">
           <div class="contents row-2">
-            <div class="container pb10 fixH">
+            <!-- 1. 점검진행현황 -->
+            <div class="container pb10 fixH dashboard-status">
                 <div class="group" style="padding: 10px 0; height: 250px;"><!-- 20240202 height는 원하시는 크기로 수정 가능합니다. -->
                     <div class="mainWidget">
                         <div class="widgetTit dashboardTit d-flex align-items-baseline justify-content-between">
@@ -55,25 +45,25 @@
                             <div class="row">
                               <div class="col-3 h-100">
                                 <h4 class="h4_tit tit_noicon">처리율</h4>
-                                <div id="chartPieDiv1" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
+                                <div id="statusPieDiv1" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
                                     CHARTS
                                 </div>
                               </div>
                               <div class="col-3 h-100">
                                   <h4 class="h4_tit tit_noicon">전체 오류 건수</h4>
-                                  <div id="chartPieDiv2" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
+                                  <div id="statusPieDiv2" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
                                       CHARTS
                                   </div>
                               </div>
                               <div class="col-3 h-100">
                                   <h4 class="h4_tit tit_noicon">웹 오류 건수</h4>
-                                  <div id="chartPieDiv3" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
+                                  <div id="statusPieDiv3" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
                                       CHARTS
                                   </div>
                               </div>
                               <div class="col-3 h-100">
                                   <h4 class="h4_tit tit_noicon">배치 오류 건수</h4>
-                                  <div id="chartPieDiv4" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
+                                  <div id="statusPieDiv4" class="chartBox" style="height: calc(100% - 34px);"><!-- 20240202 - 34px로 수정 -->
                                       CHARTS
                                   </div>
                               </div>
@@ -83,7 +73,9 @@
                     </div>
                 </div>
             </div>
-            <div class="container pb10 fixH">
+            <!-- // 1. 점검진행현황 -->
+            <!-- 2. 예외오류 | ITSM SR | 고객문의 | 월작업 CHECK -->
+            <div class="container pb10 fixH dashboard-table">
               <div class="group">
                 <div class="mainWidget">
                   <div class="widgetTit dashboardTit d-flex align-items-baseline justify-content-between">
@@ -105,7 +97,7 @@
                             <p class="p-2">발생 <span>50</span></p>/
                             <p class="p-2">해결 <span>10</span></p>
                           </div>
-                          <div id="chartBarSub1" class="chartBox" style="height: 50px;"><!-- height는 원하시는 크기로 수정 가능합니다. -->
+                          <div id="tableBarDiv1" class="chartBox" style="height: 50px;"><!-- height는 원하시는 크기로 수정 가능합니다. -->
                             CHARTS
                           </div>
                         </div>
@@ -409,7 +401,21 @@
                         </div>
                       </div>
                       <div class="px-5">
+                        <!-- 2024.08.23 캘린더 월별이동 추가 -->
+                        <div class="datePick my-4">
+                          <div class="d-flex justify-content-center align-item-center">
+                            <button type="button" class="month-pre">
+                              <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                            </button>
+                            <p>2024년 8월</p>
+                            <button type="button" class="month-next">
+                              <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <!-- // 2024.08.23 캘린더 월별이동 추가 -->
                         <!-- tabela -->
+                        <!-- 현업: onsite / 재무: finance / 계산서신고: declaration / 원포인트: onepoint / 내부거래: transaction -->
                         <table id="calendar" class="calendar" width="100%" tabindex="0">                               
                           <thead>                           
                             <tr>
@@ -492,12 +498,14 @@
                 </div>
               </div>
             </div>
-            <div class="container pb10 fixH">
+            <!-- // 2. 예외오류 | ITSM SR | 고객문의 | 월작업 CHECK -->
+            <!-- 3. 시스템별 CHECK LIST -->
+            <div class="container pb10 fixH dashboard-chart">
               <div class="group">
                 <div class="mainWidget">
                   <div class="widgetTit dashboardTit d-flex align-items-baseline justify-content-between">
                       <h3 class="h3_tit">
-                        예외오류 | ITSM SR | 고객 문의 | 월 작업 Check
+                        시스템별 Check List
                       </h3>
                       <span>2024. 9월말 기준</span>
                   </div>
@@ -577,33 +585,37 @@
                           <ul class="data-list">
                             <li class="d-flex align-items-center">
                               <p>BizOne</p>
-                              <div id="boardBar1" class="boardBar" >
+                              <div id="Data-barChart1" class="boardBar" >
                                 CHARTS
                               </div>
                             </li>
                             <li class="d-flex align-items-center">
                               <p>BroadOne</p>
-                              <div id="boardBar1" class="boardBar complete"></div>
+                              <div id="Data-barChart2" class="boardBar" >
+                                CHARTS
+                              </div>
                             </li>
                             <li class="d-flex align-items-center">
                               <p>MediaOne</p>
-                              <div id="boardBar1" class="boardBar complete"></div>
+                              <div id="Data-barChart3" class="boardBar" >
+                                CHARTS
+                              </div>
                             </li>
                             <li class="d-flex align-items-center">
                               <p>MovieOne</p>
-                              <div id="boardBar1" class="boardBar" >
+                              <div id="Data-barChart4" class="boardBar" >
                                 CHARTS
                               </div>
                             </li>
                             <li class="d-flex align-items-center">
                               <p>MusicOne</p>
-                              <div id="boardBar1" class="boardBar" >
+                              <div id="Data-barChart5" class="boardBar" >
                                 CHARTS
                               </div>
                             </li>
                             <li class="d-flex align-items-center">
                               <p>DMP</p>
-                              <div id="boardBar1" class="boardBar" >
+                              <div id="Data-barChart6" class="boardBar" >
                                 CHARTS
                               </div>
                             </li>
@@ -625,34 +637,228 @@
                           <ul class="data-list">
                             <li class="d-flex align-items-center">
                               <p>BizOne</p>
-                              <div id="boardBar1" class="boardBar" >
+                              <div id="Batch-barChart1" class="boardBar" >
                                 CHARTS
                               </div>
                             </li>
                             <li class="d-flex align-items-center">
                               <p>BroadOne</p>
-                              <div id="boardBar1" class="boardBar complete"></div>
+                              <div id="Batch-barChart2" class="boardBar" >
+                                CHARTS
+                              </div>
                             </li>
                             <li class="d-flex align-items-center">
                               <p>MediaOne</p>
-                              <div id="boardBar1" class="boardBar complete"></div>
+                              <div id="Batch-barChart3" class="boardBar" >
+                                CHARTS
+                              </div>
                             </li>
                             <li class="d-flex align-items-center">
                               <p>MovieOne</p>
-                              <div id="boardBar1" class="boardBar" >
+                              <div id="Batch-barChart4" class="boardBar" >
                                 CHARTS
                               </div>
                             </li>
                             <li class="d-flex align-items-center">
                               <p>MusicOne</p>
-                              <div id="boardBar1" class="boardBar" >
+                              <div id="Batch-barChart5" class="boardBar" >
                                 CHARTS
                               </div>
                             </li>
                             <li class="d-flex align-items-center">
                               <p>DMP</p>
-                              <div id="boardBar1" class="boardBar" >
+                              <div id="Batch-barChart6" class="boardBar" >
                                 CHARTS
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 p-2">
+                      <div class="dataCnt row mx-3 justify-content-between">
+                        <div class="col-4">
+                          <div id="folder">
+                            <div class="folderTit">
+                              <h3>EAI</h3>
+                              <span>총 50건/ 36건 진행/ 14건 대기</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-8 pl-3">
+                          <ul class="data-list">
+                            <li class="d-flex align-items-center">
+                              <p>BizOne</p>
+                              <div id="Eai-barChart1" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>BroadOne</p>
+                              <div id="Eai-barChart2" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>MediaOne</p>
+                              <div id="Eai-barChart3" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>MovieOne</p>
+                              <div id="Eai-barChart4" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>MusicOne</p>
+                              <div id="Eai-barChart5" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>DMP</p>
+                              <div id="Eai-barChart6" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 p-2">
+                      <div class="dataCnt row mx-3 justify-content-between">
+                        <div class="col-4">
+                          <div id="folder">
+                            <div class="folderTit">
+                              <h3>API</h3>
+                              <span>총 50건/ 36건 진행/ 14건 대기</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-8 pl-3">
+                          <ul class="data-list">
+                            <li class="d-flex align-items-center">
+                              <p>BizOne</p>
+                              <div id="Api-barChart1" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>BroadOne</p>
+                              <div id="Api-barChart2" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>MediaOne</p>
+                              <div id="Api-barChart3" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>MovieOne</p>
+                              <div id="Api-barChart4" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>MusicOne</p>
+                              <div id="Api-barChart5" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>DMP</p>
+                              <div id="Api-barChart6" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 p-2">
+                      <div class="dataCnt row mx-3 justify-content-between">
+                        <div class="col-4">
+                          <div id="folder">
+                            <div class="folderTit">
+                              <h3>SAP</h3>
+                              <span>총 50건/ 36건 진행/ 14건 대기</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-8 pl-3">
+                          <ul class="data-list">
+                            <li class="d-flex align-items-center">
+                              <p>BizOne</p>
+                              <div id="Sap-barChart1" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>BroadOne</p>
+                              <div id="Sap-barChart2" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>MediaOne</p>
+                              <div id="Sap-barChart3" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>MovieOne</p>
+                              <div id="Sap-barChart4" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>MusicOne</p>
+                              <div id="Sap-barChart5" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>DMP</p>
+                              <div id="Sap-barChart6" class="boardBar" >
+                                CHARTS
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 p-2">
+                      <div class="dataCnt row mx-3 justify-content-between">
+                        <div class="col-4">
+                          <div id="folder">
+                            <div class="folderTit">
+                              <h3>ETC</h3>
+                              <span>총 50건/ 36건 진행/ 14건 대기</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-8 pl-3">
+                          <ul class="data-list">
+                            <li class="d-flex align-items-center">
+                              <p>SNS</p>
+                              <div>
+                                <p>발송 실패</p>
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>E-mail</p>
+                              <div>
+                                <p>발송 실패</p>
+                              </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                              <p>Kakao talk</p>
+                              <div>
+                                <p>발송 실패</p>
                               </div>
                             </li>
                           </ul>
@@ -663,328 +869,394 @@
                 </div>
               </div>
             </div>
+            <!-- // 3. 시스템별 CHECK LIST -->
+            <!-- 4. 현황 추이 -->
+            <div class="container pb10 fixH dashboard-transition">
+              <div class="group">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="mainWidget ">
+                      <div class="widgetTit dashboardTit">
+                        <h3 class="h3_tit">
+                            오류 발생 추이
+                        </h3>
+                      </div>
+                      <div class="widgetCont dashboardCnt">
+                        <div id="variousChart1" class="boardBar p-4" style="height: 450px;">
+                          CHARTS
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="mainWidget">
+                      <div class="widgetTit dashboardTit">
+                        <h3 class="h3_tit">
+                            ITSM 고객만족도 평가 추이
+                        </h3>
+                      </div>
+                      <div class="widgetCont dashboardCnt">
+                        <div id="variousChart2" class="boardBar p-4" style="height: 450px;">
+                          CHARTS
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- // 4. 현황 추이 -->
           </div>
     </div>
   </div>
-
-      <!-- amCharts 4 core -->
-      <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
-      <!-- amCharts 4 charts -->
-      <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
-      <!-- amCharts 4 animated theme (optional) -->
-      <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+  <!-- amCharts 4 core -->
+  <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+  <!-- amCharts 4 charts -->
+  <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+  <!-- amCharts 4 animated theme (optional) -->
+  <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
   <script>
-  am4core.ready(function() {
+    am4core.ready(function() {
       am4core.useTheme(am4themes_animated);
   
-      let chart1 = am4core.create("chartPieDiv1", am4charts.PieChart)
-  
-      // Set inner radius
-      chart1.innerRadius = am4core.percent(60);
-      chart1.startAngle = 140;
-      chart1.endAngle = 400;
-  
-      let pieSeries1 = chart1.series.push(new am4charts.PieSeries());
-      
-      pieSeries1.data = [{
-          "country": "First",
-          "litres": 770,
-          "fill": "#669bbc",
-          }, {
-          "country": "Remaining",
-          "litres": 230,
-          "fill": "#eeeeee",
-      }]
-  
-      pieSeries1.dataFields.value = "litres";
-      pieSeries1.dataFields.category = "country";
-      pieSeries1.dataFields.hidden = "hidden";
-  
-  
-      // Disable ticks and labels
-      pieSeries1.labels.template.disabled = true;
-      pieSeries1.ticks.template.disabled = true;
-      pieSeries1.slices.template.propertyFields.fill = "fill";
-  
-      // Animation
-      pieSeries1.hiddenState.properties.startAngle = 90;
-      pieSeries1.hiddenState.properties.endAngle = 90;
-  
-      // Add label
-      let label1 = pieSeries1.createChild(am4core.Label);
-      label1.text = `${pieSeries1.data[0].litres}건\n\n\n `;
-      label1.fontWeight = "bold";
-      label1.align = "center";
-      label1.textAlign = "middle";
-      label1.horizontalCenter = "middle";
-      label1.verticalCenter = "middle";
-      label1.fontSize = 30;
-  
-      let pieSeriesPercent1 = pieSeries1.data[0].litres / (pieSeries1.data[0].litres + pieSeries1.data[1].litres) * 100;
-      let label2 = pieSeries1.createChild(am4core.Label);
-      label2.text = `\n(진행율 ${pieSeriesPercent1}%)`;
-      label2.fontWeight = "500";
-      label2.align = "center";
-      label2.textAlign = "middle";
-      label2.horizontalCenter = "middle";
-      label2.verticalCenter = "middle";
-      label2.fontSize = 16;
-  
-  
-  
-  
-      let chart2 = am4core.create("chartPieDiv2", am4charts.PieChart)
-  
-      // Set inner radius
-      chart2.innerRadius = am4core.percent(60);
-      chart2.startAngle = 140;
-      chart2.endAngle = 400;
-  
-      let pieSeries2 = chart2.series.push(new am4charts.PieSeries());
-  
-      pieSeries2.data = [{
-          "country": "First",
-          "litres": 60,
-          "fill": "#669bbc",
-          }, {
-          "country": "Remaining",
-          "litres": 40,
-          "fill": "#eeeeee",
-      }]
-  
-      pieSeries2.dataFields.value = "litres";
-      pieSeries2.dataFields.category = "country";
-      pieSeries2.dataFields.hidden = "hidden";
-  
-  
-      // Disable ticks and labels
-      pieSeries2.labels.template.disabled = true;
-      pieSeries2.ticks.template.disabled = true;
-      pieSeries2.slices.template.propertyFields.fill = "fill";
-  
-      // Animation
-      pieSeries2.hiddenState.properties.startAngle = 90;
-      pieSeries2.hiddenState.properties.endAngle = 90;
-  
-      // Add label
-      let label3 = pieSeries2.createChild(am4core.Label);
-      label3.text = `${pieSeries2.data[0].litres}건\n\n\n `;
-      label3.fontWeight = "bold";
-      label3.align = "center";
-      label3.textAlign = "middle";
-      label3.horizontalCenter = "middle";
-      label3.verticalCenter = "middle";
-      label3.fontSize = 30;
-  
-      let pieSeriesPercent2 = pieSeries2.data[0].litres / (pieSeries2.data[0].litres + pieSeries2.data[1].litres) * 100;
-      let label4 = pieSeries2.createChild(am4core.Label);
-      label4.text = `\n(진행율 ${pieSeriesPercent2}%)`;
-      label4.fontWeight = "500";
-      label4.align = "center";
-      label4.textAlign = "middle";
-      label4.horizontalCenter = "middle";
-      label4.verticalCenter = "middle";
-      label4.fontSize = 16;
-  
-      
-  
-  
-      let chart3 = am4core.create("chartPieDiv3", am4charts.PieChart)
-  
-      // Set inner radius
-      chart3.innerRadius = am4core.percent(60);
-      chart3.startAngle = 140;
-      chart3.endAngle = 400;
-  
-      let pieSeries3 = chart3.series.push(new am4charts.PieSeries());
-  
-      pieSeries3.data = [{
-          "country": "First",
-          "litres": 640,
-          "fill": "#669bbc",
-          }, {
-          "country": "Remaining",
-          "litres": 160,
-          "fill": "#eeeeee",
-      }]
-  
-      pieSeries3.dataFields.value = "litres";
-      pieSeries3.dataFields.category = "country";
-      pieSeries3.dataFields.hidden = "hidden";
-  
-  
-      // Disable ticks and labels
-      pieSeries3.labels.template.disabled = true;
-      pieSeries3.ticks.template.disabled = true;
-      pieSeries3.slices.template.propertyFields.fill = "fill";
-  
-      // Animation
-      pieSeries3.hiddenState.properties.startAngle = 90;
-      pieSeries3.hiddenState.properties.endAngle = 90;
-  
-      // Add label
-      let label5 = pieSeries3.createChild(am4core.Label);
-      label5.text = `${pieSeries3.data[0].litres}건\n\n\n `;
-      label5.fontWeight = "bold";
-      label5.align = "center";
-      label5.textAlign = "middle";
-      label5.horizontalCenter = "middle";
-      label5.verticalCenter = "middle";
-      label5.fontSize = 30;
-  
-      let pieSeriesPercent3 = pieSeries3.data[0].litres / (pieSeries3.data[0].litres + pieSeries3.data[1].litres) * 100;
-      let label6 = pieSeries3.createChild(am4core.Label);
-      label6.text = `\n(진행율 ${pieSeriesPercent3}%)`;
-      label6.fontWeight = "500";
-      label6.align = "center";
-      label6.textAlign = "middle";
-      label6.horizontalCenter = "middle";
-      label6.verticalCenter = "middle";
-      label6.fontSize = 16;
-  
+      // 1. 점검진행현황 Pie Chart
+      const createPieChart = (divId, firstValue, remainingValue) => {
+        let chart = am4core.create(divId, am4charts.PieChart);
 
-      let chart4 = am4core.create("chartPieDiv4", am4charts.PieChart)
-  
-      // Set inner radius
-      chart4.innerRadius = am4core.percent(60);
-      chart4.startAngle = 140;
-      chart4.endAngle = 400;
-  
-      let pieSeries4 = chart4.series.push(new am4charts.PieSeries());
-  
-      pieSeries4.data = [{
-          "country": "First",
-          "litres": 100,
-          "fill": "#669bbc",
-          }, {
-          "country": "Remaining",
-          "litres": 0,
-          "fill": "#eeeeee",
-      }]
-  
-      pieSeries4.dataFields.value = "litres";
-      pieSeries4.dataFields.category = "country";
-      pieSeries4.dataFields.hidden = "hidden";
-  
-  
-      // Disable ticks and labels
-      pieSeries4.labels.template.disabled = true;
-      pieSeries4.ticks.template.disabled = true;
-      pieSeries4.slices.template.propertyFields.fill = "fill";
-  
-      // Animation
-      pieSeries4.hiddenState.properties.startAngle = 90;
-      pieSeries4.hiddenState.properties.endAngle = 90;
-  
-      // Add label
-      let label7 = pieSeries4.createChild(am4core.Label);
-      label7.text = `${pieSeries4.data[0].litres}건\n\n\n `;
-      label7.fontWeight = "bold";
-      label7.align = "center";
-      label7.textAlign = "middle";
-      label7.horizontalCenter = "middle";
-      label7.verticalCenter = "middle";
-      label7.fontSize = 30;
-  
-      let pieSeriesPercent4 = pieSeries4.data[0].litres / (pieSeries4.data[0].litres + pieSeries4.data[1].litres) * 100;
-      let label8 = pieSeries4.createChild(am4core.Label);
-      label8.text = `\n(진행율 ${pieSeriesPercent4}%)`;
-      label8.fontWeight = "500";
-      label8.align = "center";
-      label8.textAlign = "middle";
-      label8.horizontalCenter = "middle";
-      label8.verticalCenter = "middle";
-      label8.fontSize = 16;
+        chart.innerRadius = am4core.percent(60);
+        chart.startAngle = 140;
+        chart.endAngle = 400;
 
+        let pieSeries = chart.series.push(new am4charts.PieSeries());
+        pieSeries.data = [
+          { "country": "Progress", "litres": firstValue, "fill": "#669bbc" },
+          { "country": "Not in progress", "litres": remainingValue, "fill": "#eeeeee" }
+        ];
 
+        pieSeries.dataFields.value = "litres";
+        pieSeries.dataFields.category = "country";
+        pieSeries.labels.template.disabled = true;
+        pieSeries.ticks.template.disabled = true;
+        pieSeries.slices.template.propertyFields.fill = "fill";
 
-      ///////// subchart
-      
+        pieSeries.hiddenState.properties.startAngle = 90;
+        pieSeries.hiddenState.properties.endAngle = 90;
 
-      let barChart1 = am4core.create("chartBarSub1", am4charts.XYChart);
-      barChart1.numberFormatter.numberFormat = "#.";
-  
-      barChart1.data = [{
-          "year": "",
-          "success": 80,
-          "fail": 10,
-      }]
-  
-      let colorSet1 = new am4core.ColorSet();
-      colorSet1.list = [
-        "#A9D18E",
-        "#E2F0D9",
-        "#C5E0B4",
-      ].map(function(color) {
-          return new am4core.color(color);
-      });;
-      barChart1.colors = colorSet1;
-  
-      barChart1.legend = new am4charts.Legend();
-      barChart1.legend.position = "right";
-      barChart1.legend.width = 100;
-      barChart1.legend.itemContainers.template.paddingTop = 5;
-      barChart1.legend.scale = 0.8;
-      barChart1.legend.markers.template.width = 10;
-      barChart1.legend.markers.template.height = 10;
-  
-      let categoryAxis1 = barChart1.yAxes.push(new am4charts.CategoryAxis());
-      categoryAxis1.dataFields.category = "year";
-      categoryAxis1.renderer.grid.template.opacity = 0;
-  
-      let valueAxis1 = barChart1.xAxes.push(new am4charts.ValueAxis());
-      valueAxis1.min = 0;
-      valueAxis1.paddingRight = 40;
-      valueAxis1.renderer.labels.template.disabled = true;
-      valueAxis1.renderer.baseGrid.disabled = true;
-      valueAxis1.calculateTotals = true;
-  
-      function createSeries(chart, field, name) {
+        let total = firstValue + remainingValue;
+        let percentage = (firstValue / total) * 100;
+
+        let label1 = pieSeries.createChild(am4core.Label);
+        label1.text = `${firstValue}건\n\n\n `;
+        label1.fontWeight = "bold";
+        label1.align = "center";
+        label1.horizontalCenter = "middle";
+        label1.verticalCenter = "middle";
+        label1.fontSize = 30;
+
+        let label2 = pieSeries.createChild(am4core.Label);
+        label2.text = `\n(진행율 ${percentage}%)`;
+        label2.fontWeight = "500";
+        label2.align = "center";
+        label2.horizontalCenter = "middle";
+        label2.verticalCenter = "middle";
+        label2.fontSize = 16;
+      };
+
+      // 1. 점검진행현황 차트생성 호출 createPieChart("영역", 진행율수치, 미진행율수치);
+      createPieChart("statusPieDiv1", 770, 230);
+      createPieChart("statusPieDiv2", 60, 40);
+      createPieChart("statusPieDiv3", 640, 160);
+      createPieChart("statusPieDiv4", 100, 0);
+
+      // 2. 예외오류 Bar Chart
+      function createTableBarChart(divId, data, colors, seriesFields) {
+        let chart = am4core.create(divId, am4charts.XYChart);
+        chart.data = data;
+        chart.colors.list = colors.map(color => am4core.color(color));
+
+        // 2-1.범례 설정
+        chart.legend = new am4charts.Legend();
+        chart.legend.position = "right";
+        chart.legend.width = 100;
+        chart.legend.itemContainers.template.paddingTop = 5;
+        chart.legend.scale = 0.8;
+        chart.legend.markers.template.width = chart.legend.markers.template.height = 10;
+
+        // 2-2. 축 설정
+        let categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+        categoryAxis.dataFields.category = "year";
+        categoryAxis.renderer.grid.template.opacity = 0;
+
+        let valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
+        valueAxis.min = 0;
+        valueAxis.renderer.labels.template.disabled = true;
+        valueAxis.renderer.baseGrid.disabled = true;
+        valueAxis.calculateTotals = true;
+
+        // 2-3. 시리즈 생성
+        seriesFields.forEach(field => {
           let series = chart.series.push(new am4charts.ColumnSeries());
-          series.dataFields.valueX = field;
+          series.dataFields.valueX = field.name;
           series.dataFields.categoryY = "year";
           series.stacked = true;
-          series.name = name;
+          series.name = field.name;
           series.calculatePercent = true;
-          series.columns.template.tooltipText = "[bold]{name}[/]: {valueX}건";
-          
+          series.columns.template.tooltipText = `[bold]{name}[/]: {valueX}건`;
+
           let labelBullet = series.bullets.push(new am4charts.LabelBullet());
           labelBullet.locationX = 0.5;
           labelBullet.label.text = "{valueX}건";
+        });
+
+        // 2-4. Total 시리즈
+        let totalSeries = chart.series.push(new am4charts.ColumnSeries());
+        totalSeries.dataFields.valueX = "year";
+        totalSeries.dataFields.categoryY = "year";
+        totalSeries.stacked = true;
+        totalSeries.hiddenInLegend = true;
+        totalSeries.columns.template.strokeOpacity = 0;
+
+        let totalBullet = totalSeries.bullets.push(new am4charts.LabelBullet());
+        totalBullet.dx = 40;
+        totalBullet.label.text = "{percent}%";
+        totalBullet.label.fontSize = 18;
+        totalBullet.label.background = new am4core.RoundedRectangle();
+        totalBullet.label.background.cornerRadius(100, 100, 100, 100);
+        totalBullet.label.background.stroke = chart.colors.getIndex(chart.data.length);
+        totalBullet.label.background.strokeOpacity = 1;
+        totalBullet.label.background.strokeWidth = 1;
+        totalBullet.label.background.strokeDasharray = "8,4";
       }
-  
-      createSeries(barChart1, "success", "success");
-      createSeries(barChart1, "fail", "fail");
-  
-      // Total
-      let totalSeries1 = barChart1.series.push(new am4charts.ColumnSeries());
-      totalSeries1.dataFields.valueX = "year";
-      totalSeries1.dataFields.categoryY = "year";
-      totalSeries1.stacked = true;
-      totalSeries1.hiddenInLegend = true;
-      totalSeries1.columns.template.strokeOpacity = 0;
-  
-      let totalBullet1 = totalSeries1.bullets.push(new am4charts.LabelBullet());
-      totalBullet1.dx = 40;
-      totalBullet1.label.text = "{percent}%";
-      totalBullet1.label.truncate = false;
-      totalBullet1.label.width = 30;
-      totalBullet1.label.height = 30;
-      totalBullet1.label.textAlign = "middle";
-      totalBullet1.label.textValign = "middle";
-      totalBullet1.label.fontSize = 18;
-      totalBullet1.label.tooltipText = "Total: {percent}%";
-      totalBullet1.label.background = new am4core.RoundedRectangle();
-      totalBullet1.label.background.cornerRadius("100%", "100%", "100%", "100%");
-      totalBullet1.label.background.stroke = barChart1.colors.getIndex(barChart1.data.length);
-      totalBullet1.label.background.strokeOpacity = 1;
-      totalBullet1.label.background.strokeWidth = 1;
-      totalBullet1.label.background.strokeDasharray = "8,4";
 
-  
-  })
+      // 2-5. 차트 데이터 및 설정
+      const data = [{ "year": "", "success": 80, "fail": 10 }];
+      const colors = ["#A9D18E", "#E2F0D9"];
+      const seriesFields = [{ name: "success" }, { name: "fail" }];
+
+      // 2. 예외오류 차트생성 호출
+      createTableBarChart("tableBarDiv1", data, colors, seriesFields);
+
+      // 3. 시스템별 Bar Chart
+      function createBarChart(chartId, successValue, failValue) {
+        // 3-1. 차트 데이터 및 설정
+        let data = [{
+            "category": "Process",
+            "success": successValue,
+            "fail": failValue
+        }];
+
+        let colors = ["#089c28", "#eb0000"];
+        let valueFields = [
+            { name: "success", displayName: "Success" },
+            { name: "fail", displayName: "Fail" }
+        ];
+
+        // 3-7. 막대형 차트 생성을 위한 함수호출
+        createStackedBarChart(chartId, data, colors, "category", valueFields);
+      }
+
+      function createStackedBarChart(chartId, data, colors, categoryField, valueFields) {
+        let chart = am4core.create(chartId, am4charts.XYChart);
+
+        // 3-2. 차트데이터 세팅
+        chart.data = data;
+
+        // 3-3. 차트색상 세팅
+        chart.colors.list = colors.map(color => am4core.color(color));
+
+        // 3-4. 축 설정
+        let categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+        categoryAxis.dataFields.category = categoryField;
+        categoryAxis.renderer.labels.template.disabled = true;
+        categoryAxis.renderer.grid.template.location = 0;
+        categoryAxis.renderer.minGridDistance = 1;
+        categoryAxis.renderer.cellStartLocation = 0;
+        categoryAxis.renderer.cellEndLocation = 1;
+
+        let valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
+        valueAxis.renderer.grid.template.disabled = true;
+        valueAxis.renderer.labels.template.disabled = true;
+        valueAxis.renderer.minGridDistance = 1;
+        valueAxis.renderer.baseGrid.disabled = true;
+        valueAxis.renderer.inside = true;
+
+        // 3-5. Total 시리즈
+        function createSeries(field, name, color) {
+          let series = chart.series.push(new am4charts.ColumnSeries());
+          series.dataFields.valueX = field;
+          series.dataFields.categoryY = categoryField;
+          series.name = name;
+          series.stacked = true;
+          series.columns.template.width = am4core.percent(100);
+          series.columns.template.tooltipText = "{name}: {valueX}%";
+
+          let labelBullet = series.bullets.push(new am4charts.LabelBullet());
+          labelBullet.label.text = "{valueX}%";
+          labelBullet.label.fill = am4core.color("#ffffff");
+          labelBullet.locationX = 0.5;
+          labelBullet.label.horizontalCenter = "middle";
+
+          // 데이터값 0은 레이블을 숨김
+          labelBullet.label.adapter.add("text", function (text, target) {
+              return (target.dataItem && target.dataItem.valueX > 0) ? text : "";
+          });
+
+          // 3-6. 열 색상 설정
+          series.columns.template.fill = am4core.color(color);
+        }
+
+        // Create series for each value field with appropriate colors
+        valueFields.forEach((field, index) => {
+            if (data[0][field.name] > 0) {
+                createSeries(field.name, field.displayName, colors[index]);
+            }
+        });
+
+        // Remove additional padding
+        chart.padding(0, 0, 0, 0);
+      }
+
+      // 3. 시스템별 차트생성 호출
+      // DATA
+      createBarChart("Data-barChart1", 30, 70);
+      createBarChart("Data-barChart2", 100, 0);
+      createBarChart("Data-barChart3", 100, 0);
+      createBarChart("Data-barChart4", 60, 40);
+      createBarChart("Data-barChart5", 100, 0);
+      createBarChart("Data-barChart6", 90, 10);
+      // BATCH
+      createBarChart("Batch-barChart1", 100, 0);
+      createBarChart("Batch-barChart2", 20, 80);
+      createBarChart("Batch-barChart3", 100, 0);
+      createBarChart("Batch-barChart4", 100, 0);
+      createBarChart("Batch-barChart5", 100, 0);
+      createBarChart("Batch-barChart6", 100, 0);
+      // EAI
+      createBarChart("Eai-barChart1", 100, 0);
+      createBarChart("Eai-barChart2", 100, 0);
+      createBarChart("Eai-barChart3", 100, 0);
+      createBarChart("Eai-barChart4", 30, 70);
+      createBarChart("Eai-barChart5", 100, 0);
+      createBarChart("Eai-barChart6", 90, 10);
+      // API
+      createBarChart("Api-barChart1", 100, 0);
+      createBarChart("Api-barChart2", 35, 65);
+      createBarChart("Api-barChart3", 100, 0);
+      createBarChart("Api-barChart4", 100, 0);
+      createBarChart("Api-barChart5", 100, 0);
+      createBarChart("Api-barChart6", 100, 0);
+      // SAP
+      createBarChart("Sap-barChart1", 100, 0);
+      createBarChart("Sap-barChart2", 100, 0);
+      createBarChart("Sap-barChart3", 100, 0);
+      createBarChart("Sap-barChart4", 90, 10);
+      createBarChart("Sap-barChart5", 100, 0);
+      createBarChart("Sap-barChart6", 100, 0);
+      // ETC
+      createBarChart("Etc-barChart1", 100, 0);
+      createBarChart("Etc-barChart2", 100, 0);
+      createBarChart("Etc-barChart3", 100, 0);
+      createBarChart("Etc-barChart4", 100, 0);
+      createBarChart("Etc-barChart5", 100, 0);
+      createBarChart("Etc-barChart6", 100, 0);
+
+
+      // 4. 현황 추이 Combined Chart
+      function createCombinedChart(chartId, chartData) {
+
+        let chart = am4core.create(chartId, am4charts.XYChart);
+        chart.data = chartData;
+
+        // 4-1. 축 설정
+        let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+        categoryAxis.dataFields.category = "category";
+        categoryAxis.renderer.grid.template.location = 0;
+
+        let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+
+        // 4-2. 시리즈 생성
+        function createBarSeries(name, valueField, color) {
+            let series = chart.series.push(new am4charts.ColumnSeries());
+            series.dataFields.valueY = valueField;
+            series.dataFields.categoryX = "category";
+            series.name = name;
+            series.columns.template.tooltipText = "{name}: [bold]{valueY}[/]";
+            series.columns.template.fill = am4core.color(color);
+            series.columns.template.stroke = am4core.color(color);
+        }
+
+        function createLineSeries(name, valueField, color) {
+            let series = chart.series.push(new am4charts.LineSeries());
+            series.dataFields.valueY = valueField;
+            series.dataFields.categoryX = "category";
+            series.name = name;
+            series.stroke = am4core.color(color);
+            series.strokeWidth = 3;
+            series.tooltipText = "{name}: [bold]{valueY}[/]";
+
+            let bullet = series.bullets.push(new am4charts.Bullet());
+            bullet.fill = am4core.color(color);
+            let circle = bullet.createChild(am4core.Circle);
+            circle.radius = 4;
+        }
+
+        // 4-3 데이터 기반 시리즈 설정
+        createBarSeries("Value 1", "value1", "#3085C3");
+        createLineSeries("Value 2", "value2", "#FFCD4B");
+        createLineSeries("Value 3", "value3", "#FF7676");
+        createLineSeries("Value 4", "value4", "#0E46A3");
+
+        // 4-4 cursor 추가
+        chart.cursor = new am4charts.XYCursor();
+        chart.cursor.lineX.disabled = false;
+        chart.cursor.lineY.disabled = false;
+
+        // 4-5 범례추가 및 우측백치
+        chart.legend = new am4charts.Legend();
+        chart.legend.position = "right";
+        chart.legend.valign = "middle";
+    }
+
+    // 4. 예외오류 차트생성 호출
+    // 오류 발생 추이 데이터
+    let CombinedchartData1 = [
+        { "category": "1월", "value1": 40, "value2": 55, "value3": 60, "value4": 70 },
+        { "category": "2월", "value1": 30, "value2": 78, "value3": 65, "value4": 68 },
+        { "category": "3월", "value1": 27, "value2": 40, "value3": 50, "value4": 58 },
+        { "category": "4월", "value1": 50, "value2": 33, "value3": 45, "value4": 63 },
+        { "category": "5월", "value1": 44, "value2": 89, "value3": 80, "value4": 75 },
+        { "category": "6월", "value1": 60, "value2": 56, "value3": 70, "value4": 85 },
+        { "category": "7월", "value2": 56, "value3": 70, "value4": 30 },
+        { "category": "8월", "value2": 30, "value3": 45, "value4": 60 },
+        { "category": "9월", "value2": 0, "value3": 70, "value4": 85 },
+        { "category": "10월", "value2": 0, "value3": 45, "value4": 70 },
+        { "category": "11월", "value2": 0, "value3": 70, "value4": 85 },
+        { "category": "12월", "value2": 0, "value3": 65, "value4": 85 }
+    ];
+
+    // ITSM 고개만족도 평가 추이 데이터
+    let CombinedchartData2 = [
+        { "category": "1월", "value1": 20, "value2": 0, "value3": 70, "value4": 80 },
+        { "category": "2월", "value1": 40, "value2": 0, "value3": 75, "value4": 78 },
+        { "category": "3월", "value1": 39, "value2": 29, "value3": 55, "value4": 65 },
+        { "category": "4월", "value1": 0, "value2": 45, "value3": 48, "value4": 68 },
+        { "category": "5월", "value1": 0, "value2": 90, "value3": 85, "value4": 88 },
+        { "category": "6월", "value1": 65, "value2": 80, "value3": 75, "value4": 90 },
+        { "category": "7월", "value1": 45, "value2": 35, "value3": 75, "value4": 78 },
+        { "category": "8월", "value1": 10, "value2": 0, "value3": 55, "value4": 65 },
+        { "category": "9월", "value1": 0, "value2": 0, "value3": 48, "value4": 68 },
+        { "category": "10월", "value1": 0, "value2": 0, "value3": 85, "value4": 88 },
+        { "category": "11월", "value1": 0, "value2": 0, "value3": 75, "value4": 90 },
+        { "category": "12월", "value1": 0, "value2": 0, "value3": 85, "value4": 88 }
+    ];
+
+    // Call the function to create charts with different data
+    createCombinedChart("variousChart1", CombinedchartData1);  // Uses chartData1
+    createCombinedChart("variousChart2", CombinedchartData2); // Uses chartData2
+
+
+
+    })
   </script>
-
-
 </body>
 </html>

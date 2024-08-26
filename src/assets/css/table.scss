@@ -1,14 +1,14 @@
 html,
 body {
-	height: 100%;
+  height: 100%;
 }
 
 body {
-	margin: 0;
-	font-family: 'Nanum Gothic','Roboto', sans-serif, arial;
-	background: #fff;
-	font-family: sans-serif;
-	font-weight: 100;
+  margin: 0;
+  font-family: 'Nanum Gothic', 'Roboto', sans-serif, arial;
+  background: #fff;
+  font-family: sans-serif;
+  font-weight: 100;
 }
 
 .subWidget {
@@ -19,78 +19,19 @@ body {
   height: 100%;
 }
 
-// .container {
-// 	position: absolute;
-// 	top: 50%;
-// 	left: 50%;
-// 	transform: translate(-50%, -50%);
-// }
+.table-responsive {
+  padding: 10px;
+}
 
-// table {
-// 	width: 800px;
-// 	border-collapse: collapse;
-// 	overflow: hidden;
-// 	box-shadow: 0 0 20px rgba(0,0,0,0.1);
-//   text-align: center;
-// }
+.table.dashboard-table {
 
-// th,
-// td {
-// 	padding: 15px;
-// 	background-color: rgba(255,255,255,0.2);
-// 	color: #3b3b3b;
-// }
-
-// th {
-// 	text-align: center;
-// 	color: #fff;
-// }
-
-// thead {
-// 	th {
-// 		background-color: #36304a;
-// 	}
-// }
-
-// tbody {
-// 	tr {
-//     // position: relative;
-// 		// &:hover {
-// 		// 	background-color: rgba(255,255,255,0.3);
-// 		// }
-// 	}
-// 	td {
-// 		position: relative;
-//     &:hover {
-//       background-color: #6c7ae0;
-//       color: #fff;
-//     }
-// 		&:hover {
-// 			&:before {
-// 				content: "";
-// 				position: absolute;
-// 				left: 0;
-// 				right: 0;
-// 				top: -9999px;
-// 				bottom: -9999px;
-// 				background-color: #e7e7e7;
-// 				z-index: -1;
-// 			}
-//       &::after {
-// 				content: "";
-// 				position: absolute;
-// 				top: 0;
-// 				bottom: 0;
-// 				left: -9999px;
-// 				right: -9999px;
-// 				// background-color: rgba(255,255,255,0.2);
-// 				background-color: #e7e7e7;
-// 	      // background:linear-gradient(45deg, rgb(89 231 226 / 20%), rgb(53 86 211 / 20%));
-// 				z-index: -1;
-//       }
-// 		}
-// 	}
-// }
+  thead th,
+  tbody td {
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #c0c0c0;
+  }
+}
 
 
 //신규
@@ -98,12 +39,15 @@ body {
 .fa.success {
   color: #00c851;
 }
+
 .fa.danger {
   color: #ff3547;
 }
+
 .fa.notice {
   color: #ff9800;
 }
+
 .fa-spinner {
   color: #003049;
 }
@@ -111,10 +55,13 @@ body {
 div.results {
   border: 1px solid #ddd;
   padding: 10px;
-  th, td {
+
+  th,
+  td {
     text-align: center;
     vertical-align: middle !important;
   }
+
   td {
     display: table-cell
   }
@@ -128,12 +75,12 @@ div.results {
     font-weight: 400;
   }
 
-  tbody > tr:hover {
+  tbody>tr:hover {
     background-color: #eee;
   }
 }
 
-div.table-responsive > div.dataTables_wrapper > div.row {
+div.table-responsive>div.dataTables_wrapper>div.row {
   display: block;
 }
 
@@ -159,11 +106,12 @@ div.table-responsive > div.dataTables_wrapper > div.row {
 
   /* opinion 1 */
 
-  &::before, &::after {
+  &::before,
+  &::after {
     text-transform: none;
 
     /* opinion 2 */
-    font-size: 1.2em;
+    font-size: 1em;
 
     /* opinion 3 */
     line-height: 1;
@@ -199,7 +147,7 @@ div.table-responsive > div.dataTables_wrapper > div.row {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 1ch 1.5ch;
+    padding: .75ch 1ch;
     border-radius: .3ch;
     box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
     background: #333;
@@ -210,7 +158,9 @@ div.table-responsive > div.dataTables_wrapper > div.row {
   }
 
   &:hover {
-    &::before, &::after {
+
+    &::before,
+    &::after {
       display: block;
     }
   }
@@ -223,7 +173,9 @@ div.table-responsive > div.dataTables_wrapper > div.row {
 /* don't show empty tooltips */
 
 [tooltip=''] {
-  &::before, &::after {
+
+  &::before,
+  &::after {
     display: none !important;
   }
 }
@@ -231,38 +183,49 @@ div.table-responsive > div.dataTables_wrapper > div.row {
 /* FLOW: UP */
 
 [tooltip] {
-  &:not([flow])::before, &[flow^="up"]::before {
+
+  &:not([flow])::before,
+  &[flow^="up"]::before {
     bottom: 100%;
     border-bottom-width: 0;
     border-top-color: #333;
   }
 
-  &:not([flow])::after, &[flow^="up"]::after {
+  &:not([flow])::after,
+  &[flow^="up"]::after {
     bottom: calc(100% + 5px);
   }
 
   &:not([flow]) {
-    &::before, &::after {
+
+    &::before,
+    &::after {
       left: 50%;
       transform: translate(-50%, -0.5em);
     }
   }
 
   &[flow^="up"] {
-    &::before, &::after {
+
+    &::before,
+    &::after {
       left: 50%;
       transform: translate(-50%, -0.5em);
     }
   }
 
   &:not([flow]):hover {
-    &::before, &::after {
+
+    &::before,
+    &::after {
       animation: tooltips-vert 300ms ease-out forwards;
     }
   }
 
   &[flow^="up"]:hover {
-    &::before, &::after {
+
+    &::before,
+    &::after {
       animation: tooltips-vert 300ms ease-out forwards;
     }
   }

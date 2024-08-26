@@ -3,33 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 기존 bizone 반영 CSS -->
 	<link rel="stylesheet"  href="./assets/css/all.min.css" >
 	<link rel="stylesheet" href="./assets/css/layout.css">
 	<link rel="stylesheet" href="./assets/css/default.css">
 	<link rel="stylesheet" href="./assets/css/button.css">
 	<link rel="stylesheet" href="./assets/css/bootstrap_modify.css">
-  <link rel="stylesheet" href="./assets/css/AUIGrid_style.css">
-	<link rel="stylesheet" href="./assets/css/AUIGrid_custom.css">
-	<link rel="stylesheet" href="./assets/css/AUIPivot_style.css">
-	<link rel="stylesheet" href="./assets/css/AUIPivot_custom.css">
+  <!--// 기존 bizone 반영 CSS -->
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <!-- 24.08 대시보드_테이블 추가 CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"> -->
-  <!-- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.amber-pink.min.css"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.6.0/css/mdb.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="./assets/css/table.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
-  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-  <title>Document</title>
+  <!-- // 24.08 대시보드_테이블 CSS -->
+  <title>장애예방활동 모니터링 시스템 - 점검 결과 현황</title>
 </head>
 <body>
-  
   <div class="contentWrap">
     <div class="titWrap">
       <h2 class="h2_tit">점검 결과 대시보드</h2>
@@ -37,7 +25,7 @@
     <div id="subcontent">
       <div class="contents" style="height: 563px;">
         <div class="container pb10 fixH">
-          <div class="group" style="padding: 10px 0; height: 400px;"><!-- 20240812 height는 원하시는 크기로 수정 가능 -->
+          <div class="group" style="padding: 10px 0; height: 450px;"><!-- 20240812 height는 원하시는 크기로 수정 가능 -->
             <div class="mainWidget">
               <div class="widgetTit d-flex align-items-baseline justify-content-between">
                 <h3 class="h3_tit">
@@ -54,146 +42,139 @@
                       <span class="pr-2"><i class="fa fa-exclamation-triangle danger fa-lg pr-1" aria-hidden="true"></i>조치중(이상있음)</span>
                     </div>
                   </div>
-                  <div class="mt-2 table-responsive results" id="header-table">
+                  <div class="mt-2 table-responsive" id="header-table">
                     <!-- tabela -->
-                    <table id="tabela1" class="table" width="100%" tabindex="0" aria-label="results">                               
+                    <table id="tabela1" class="table dashboard-table" width="100%" tabindex="0" aria-label="results">                               
                       <thead>                           
                         <tr>
+                          <th colspan="6" tabindex="0" style="background-color:#758cba; color: #fff; font-weight: 700;">
+                            점검결과현황
+                          </th>      
+                        </tr>                           
+                        <tr>
+                          <th colspan="2" rowspan="2" tabindex="0">
+                            구분
+                          </th>
+                          <th colspan="2" tabindex="0" style="background-color:#eef1f7;">
+                            당일점검
+                          </th>
                           <th colspan="2" tabindex="0">
-                            Name
+                            전일점검
+                          </th>       
+                        </tr>
+                        <tr>            
+                          <th tabindex="0" style="background-color:#eef1f7;">
+                            API
+                          </th>
+                          <th tabindex="0" style="background-color:#eef1f7;">
+                            DATA
+                          </th>            
+                          <th tabindex="0">
+                            API
                           </th>
                           <th tabindex="0">
-                            DB
-                          </th>
-                          <th tabindex="0">
-                            Location
-                          </th>                   
-                          <th tabindex="0">
-                            Situation
-                          </th>
-                          <th tabindex="0">
-                            Last Change
-                          </th>
-                          <th tabindex="0">
-                            More Options
+                            DATA
                           </th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td rowspan="2" tabindex="0">
+                          <td tabindex="0">
                             점검
                           </td>
                           <td tabindex="0">
-                            status
+                            상태
                           </td>
+                          <td tabindex="0" style="background-color:#eef1f7;">
+                            <span tooltip="진행중" title="">
+                              <i class="fa fa-minus-circle notice fa-lg" aria-hidden="true"></i>
+                            </span>
+                          </td>
+                          <td tabindex="0" style="background-color:#eef1f7;">
+                            <span tooltip="조치완료" title="">
+                              <i class="fa fa-check-circle success fa-lg" aria-hidden="true"></i>
+                            </span>
+                          </td>  
                           <td tabindex="0">
                             <span tooltip="조치완료" title="">
                               <i class="fa fa-check-circle success fa-lg" aria-hidden="true"></i>
                             </span>
-                          </td>            
+                          </td>          
                           <td tabindex="0">
                             <span tooltip="조치중" title="">
                               <i class="fa fa-exclamation-triangle danger fa-lg" aria-hidden="true"></i>
                             </span>
                           </td>
-                          <td tabindex="0">
-                            <span tooltip="진행중" title="">
-                              <i class="fa fa-minus-circle notice fa-lg" aria-hidden="true"></i>
-                            </span>
-                          </td>
-                          <td tabindex="0">
-                            <span tooltip="실행중" title="">
-                              <i class="fa fa-spinner fa-pulse fa-lg"></i>
-                            </span>
-                          </td>
-                          <td tabindex="0">
-                            <span tooltip="진행중" title="">
-                              <i class="fa fa-minus-circle notice fa-lg" aria-hidden="true"></i>
-                            </span>
-                          </td>
                         </tr>
                         <tr>
-                          <td tabindex="0">
-                            완료시간
+                          <td rowspan="4" tabindex="0">
+                            점검항목
                           </td>
                           <td tabindex="0">
-                            -
+                            전체건수
+                          </td>
+                          <td tabindex="0" style="background-color:#eef1f7;">
+                            19
+                          </td>
+                          <td tabindex="0" style="background-color:#eef1f7;">
+                            50
                           </td>
                           <td tabindex="0">
-                            09:19
-                          </td>
-                          <td tabindex="0">
-                            12:40
-                          </td>
-                          <td tabindex="0">
-                            09:19
+                            19
                           </td>
                           <td tabindex="0">   
-                            11:11
+                            50
                           </td>
                         </tr>
                         <tr>
-                          <td rowspan="3" tabindex="0">
-                            점검항목<br>(건)
+                          <td tabindex="0">
+                            진행건수
+                          </td>
+                          <td tabindex="0" style="background-color:#eef1f7;">
+                            18
+                          </td>
+                          <td tabindex="0" style="background-color:#eef1f7;">
+                            50
                           </td>
                           <td tabindex="0">
-                            전체
+                            19
+                          </td>
+                          <td tabindex="0">   
+                            50
+                          </td>
+                        </tr>
+                        <tr>
+                          <td tabindex="0">
+                            대기건수
+                          </td>
+                          <td tabindex="0" style="background-color:#eef1f7;">
+                            1
+                          </td>
+                          <td tabindex="0" style="background-color:#eef1f7;">
+                            0
                           </td>
                           <td tabindex="0">
-                            189
+                            0
+                          </td>
+                          <td tabindex="0">   
+                            0
+                          </td>
+                        </tr>
+                        <tr>
+                          <td tabindex="0">
+                            점검필요건수
+                          </td>
+                          <td tabindex="0" style="background-color:#eef1f7;">
+                            0
+                          </td>
+                          <td tabindex="0" style="background-color:#eef1f7;">
+                            0
                           </td>
                           <td tabindex="0">
+                            0
+                          </td>
+                          <td tabindex="0">   
                             5
-                          </td>
-                          <td tabindex="0">
-                            82
-                          </td>
-                          <td tabindex="0">
-                            205
-                          </td>
-                          <td tabindex="0">   
-                            72
-                          </td>
-                        </tr>
-                        <tr>
-                          <td tabindex="0">
-                            이상
-                          </td>
-                          <td tabindex="0">
-                            0
-                          </td>
-                          <td tabindex="0">
-                            0
-                          </td>
-                          <td tabindex="0">
-                            0
-                          </td>
-                          <td tabindex="0">
-                            0
-                          </td>
-                          <td tabindex="0">      
-                            0
-                          </td>
-                        </tr>
-                        <tr>
-                          <td tabindex="0">
-                            조치
-                          </td>
-                          <td tabindex="0">
-                            0
-                          </td>
-                          <td tabindex="0">
-                            0
-                          </td>
-                          <td tabindex="0">
-                            0
-                          </td>
-                          <td tabindex="0">
-                            0
-                          </td>
-                          <td tabindex="0">      
-                            0
                           </td>
                         </tr>
                       </tbody>
@@ -208,9 +189,5 @@
       </div> 
     </div>
   </div>
-
-
-
-
 </body>
 </html>
